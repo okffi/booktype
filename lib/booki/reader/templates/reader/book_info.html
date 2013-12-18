@@ -112,7 +112,7 @@
 <li>
 <b>{% trans "Collaborators:" %}</b>
 {% for username in book_collaborators %}
-  <a href="{% url view_profile book.owner.username %}" class="user">{{ username }}</a>
+  <a href="{% url view_profile username %}" class="user">{{ username }}</a>
   {% if not forloop.last %},{% endif %}
 {% endfor %}
 </li>
@@ -120,7 +120,7 @@
 <li>
 <b>{% trans "Online editing:" %}</b> 
 {% for username in online_users %}
-  <a href="{% url view_profile book.owner.username %}" class="user">{{ username }}</a>
+  <a href="{% url view_profile username %}" class="user">{{ username }}</a>
   {% if not forloop.last %},{% endif %}
 {% endfor %}
 </li>
@@ -230,7 +230,7 @@
          </td>
        {% endif %}
 
-     <td valign="top"> <a href="{% url view_profile book.owner.username %}" class="user">{{ ln.user.username }}</a> </td>
+     <td valign="top"> <a href="{% url view_profile ln.user.username %}" class="user">{{ ln.user.username }}</a> </td>
      <td valign="top"> {{ ln.modified }} </td>
    </tr>
  {% endfor %}

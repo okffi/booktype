@@ -47,14 +47,18 @@
  <div id="bookcontent">
    {% if editing_enabled %}
      <div class="action-menu top">
-      	<a href="{% url edit_book book.url_title %}#/edit/{{ content.url_title }}">{% trans "EDIT" %}</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
+      <a href="{% url book_info book.url_title %}">INFO</a>
      </div>
    {% endif %}
 
   {% booki_format content %}
    {% if editing_enabled %}
     <div class="action-menu bottom">
-      	<a href="{% url edit_book book.url_title %}#/edit/{{ content.url_title }}">{% trans "EDIT" %}</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
+      <a href="{% url book_info book.url_title %}">INFO</a>
      </div>
    {% endif %}
   </div>
