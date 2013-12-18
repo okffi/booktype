@@ -111,11 +111,11 @@ def debug_redis(request):
 
 def view_frontpage(request):
     """
-    Django View. This is main Booktype Front Page. 
+Django View. This is main Booktype Front Page.
 
-    @type request: C{django.http.HttpRequest}
-    @param request: Client Request object
-    """
+@type request: C{django.http.HttpRequest}
+@param request: Client Request object
+"""
 
     from booki.utils import config
     from booki.utils.misc import isUserLimitReached
@@ -123,16 +123,15 @@ def view_frontpage(request):
     showHistory = config.getConfiguration('BOOKTYPE_FRONTPAGE_HISTORY', True)
 
     if showHistory:
-        activityHistory = models.BookHistory.objects.filter(kind__in=[1, 10], book__hidden=False).order_by('-modified')[:20]
+        activityHistory = models.BookHistory.objects.filter(kind__in=[1, 2, 3, 4, 5, 6, 10, 11, 12, 13], book__hidden=False).order_by('-modified')[:20]
     else:
         activityHistory = []
 
-    return render_to_response('portal/frontpage.html', {"request": request, 
+    return render_to_response('portal/frontpage.html', {"request": request,
                                                         "activity_history": activityHistory,
                                                         "show_history": showHistory,
                                                         "limit_reached": isUserLimitReached(),
                                                         "title": "Booktype"})
-
 # GROUPS
 
 def view_group(request, groupid):
