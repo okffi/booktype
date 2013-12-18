@@ -10,7 +10,7 @@
 <i>{% trans "No messages." %}</i>
 {% endif %}
 
-{% for post in posts %}
+{% for post in posts|slice:":10" %}
 {% include "messaging/post.html" %}
 {% endfor %}
 </div>
