@@ -67,33 +67,50 @@
              {% trans "Chapter save" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-	         {% else %}
+                                {% endif %}
         	 {% if activity.kind == 3 %}
                {% trans "Chapter rename" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-           {% else %}
+                                {% endif %}
              {% if activity.kind == 4 %}
                  {% trans "Chapter reorder" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-             {% else %}
+                                {% endif %}
                {% if activity.kind == 5 %}
                     {% trans "Split chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-               {% else %}
+                                {% endif %}
                  {% if activity.kind == 6 %}
                      {% trans "Section create" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                      <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-                 {% else %}
-				
+                                {% endif %}				
                 {% if activity.kind == 10 %}
                 {% trans "Created new book" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}
+                     {% if activity.kind == 11 %}
+
+                         {% trans "Minor version" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
+
+		   {% endif %}
+
+                     {% if activity.kind == 12 %}
+ 
+                           {% trans "Major version" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
+ 
+		   {% endif %}
+                         {% if activity.kind == 13 %}
+ 
+                   {% trans "Uploaded" %} <a href="{% url book_info activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
+		   {% endif %}
 			</div><!-- End of .chapter -->     
 		</div><!-- end .user-->
 	</div><!-- end .recent-activity-->
