@@ -60,12 +60,38 @@
   		    <div class="chapter">  
                  {% if activity.kind == 1 %}
                  {% trans "Created new chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
-                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">#{{activity.book.url_title}}</a>
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-				{% endif %}
+				{% endif %}         
+		{% if activity.kind == 2 %}
+             {% trans "Chapter save" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
+                 </div>     
+	         {% else %}
+        	 {% if activity.kind == 3 %}
+               {% trans "Chapter rename" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
+                 </div>     
+           {% else %}
+             {% if activity.kind == 4 %}
+                 {% trans "Chapter reorder" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
+                 </div>     
+             {% else %}
+               {% if activity.kind == 5 %}
+                    {% trans "Split chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
+                 </div>     
+               {% else %}
+                 {% if activity.kind == 6 %}
+                     {% trans "Section create" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                     <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
+                 </div>     
+                 {% else %}
+				
                 {% if activity.kind == 10 %}
                 {% trans "Created new book" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
-                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">#{{activity.book.url_title}}</a>
+                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}
 			</div><!-- End of .chapter -->     
