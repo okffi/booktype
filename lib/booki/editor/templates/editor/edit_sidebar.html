@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load messaging_tags i18n %}
 
 
 <!-- chat box + drop shadow -->
@@ -10,6 +10,15 @@
   <h4>{% trans "Currently editing" %}</h4>
   <ul id="users">
   </ul>
+</div>
+<div class="block shadow"> <span class="arrow-down"></span>
+<h4>Mikroblogi</h4>
+<div style="padding:5px;">
+{% book_messagefield book.url_title %}
+</div>
+<div style="padding:5px;">
+{% book_timeline book.url_title %}
+</div>
 </div>
 <!-- end of chat box + drop shadow --> 
 
