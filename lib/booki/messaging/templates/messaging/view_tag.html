@@ -12,10 +12,11 @@
 {% tag_followbutton tagname request.user.username %}
 
 <br />
+{% if request.user.is_authenticated %}
 <div style="width:325px; border: 1px solid #c0c0c0; background-color: #f0f0f0; padding: 5px;" id="mood">
 {% tag_messagefield tagname %}
 </div>
-
+{% endif %}
 {% tag_timeline tagname %}
 
 {% endblock %}
