@@ -48,12 +48,12 @@
   		    <div class="chapter">  
                  {% if activity.kind == 1 %}
                  {% trans "Created new chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
-                 <div class="book-title">#{{activity.book.url_title}}
+                 <div class="book-title"><a href="messaging/tags/{{activity.book.url_title}}">#{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}
                 {% if activity.kind == 10 %}
                 {% trans "Created new book" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
-                 <div class="book-title">#{{activity.book.url_title}}
+                 <div class="book-title"><a href="messaging/tags/{{activity.book.url_title}}">#{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}
 			</div><!-- End of .chapter -->     
