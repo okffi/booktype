@@ -77,11 +77,11 @@ msgstr "Luo kirja"
 msgid ""
 "You don't have permissions to create new books. At the moment only "
 "administrators can do that."
-msgstr ""
+msgstr "Sinulla ei ole oikeuksia luoda uusia kirjoja. Tällä hetkellä vain ylläpitäjät voivat luoda kirjoja."
 
 #: account/templates/account/create_book.html:18
 msgid "Step 1"
-msgstr ""
+msgstr "Askel 1"
 
 #: account/templates/account/create_book.html:18
 #: editor/templates/editor/cover_manager.html:53
@@ -106,7 +106,7 @@ msgstr "Kirja, jolla on tämä nimi, on jo olemassa."
 
 #: account/templates/account/create_book.html:30
 msgid "Step 2"
-msgstr ""
+msgstr "Askel 2"
 
 #: account/templates/account/create_book.html:30
 #: account/templates/account/create_book.html:34
@@ -118,19 +118,20 @@ msgstr "Kuvaus"
 msgid ""
 "Give some information so others can find it to help you (this can be added "
 "or changed later)."
-msgstr ""
+msgstr "Anna tietoa, jotta muut voivat löytää sen ja auttaa sinua (tämä voidaan "
+"lisätä tai muuttaa myöhemmin)."
 
 #: account/templates/account/create_book.html:40
 msgid "Step 3"
-msgstr ""
+msgstr "Askel 3"
 
 #: account/templates/account/create_book.html:40
 msgid "Choose your license"
-msgstr ""
+msgstr "Valitse lisenssisi"
 
 #: account/templates/account/create_book.html:41
 msgid "Choose from the following licenses"
-msgstr ""
+msgstr "Valitse seuraavista lisensseistä"
 
 #: account/templates/account/create_book.html:43 editor/models.py:36
 #: editor/templates/editor/cover_manager.html:133
@@ -141,7 +142,7 @@ msgstr "Lisenssi"
 
 #: account/templates/account/create_book.html:54
 msgid "Step 4"
-msgstr ""
+msgstr "Askel 4"
 
 #: account/templates/account/create_book.html:54
 #: editor/templates/editor/edit_book.html:225
@@ -152,7 +153,8 @@ msgstr "Kuva"
 msgid ""
 "If you have an image for the book then add it now (this can be added or "
 "changed later)"
-msgstr ""
+msgstr "Jos sinulla on kuva kirjaa varten, voit lisätä sen nyt (tätä voi "
+"muuttaa myöhemmin)"
 
 #: account/templates/account/create_book.html:57
 #, fuzzy
@@ -161,23 +163,25 @@ msgstr "Kuva"
 
 #: account/templates/account/create_book.html:63
 msgid "Step 5"
-msgstr ""
+msgstr "Askel 5"
 
 #: account/templates/account/create_book.html:63
 msgid "Make Public?"
-msgstr ""
+msgstr "Julkista?"
 
 #: account/templates/account/create_book.html:64
 msgid ""
 "Would you like to keep your book private or make it public? If the book is "
 "public others can find the book to help you."
-msgstr ""
+msgstr "Tahtoisitko pitää kirjasi yksityisenä vai julkaista sen? Jos kirja on "
+"julkinen, muut löytävät kirjan ja auttavat sinua."
 
 #: account/templates/account/create_book.html:65
 msgid ""
 "<strong>Note:</strong> this setting can be changed later from your dashboard."
 "</p>"
-msgstr ""
+msgstr "<strong>Huomaa:</strong> tätä asetusta voit muuttaa myöhemmin koelaudaltasi."
+"</p>"
 
 #: account/templates/account/create_book.html:67
 #, fuzzy
@@ -253,7 +257,7 @@ msgstr "Lähetä pyyntö."
 
 #: account/templates/account/forgot_password.html:70
 msgid "Check your email!"
-msgstr ""
+msgstr "Lue sähköpostisi!"
 
 #: account/templates/account/forgot_password.html:71
 #, fuzzy
@@ -369,7 +373,7 @@ msgstr "Koko nimi on liian pitkä! "
 
 #: account/templates/account/form_register.html:44
 msgid "Only administrator is allowed to create new accounts at the moment."
-msgstr ""
+msgstr "Vain ylläpitäjä saa luoda uusia käyttäjätunnuksia tällä hetkellä."
 
 #: account/templates/account/form_signin.html:3
 #: account/templates/account/form_signin.html:20
@@ -397,7 +401,8 @@ msgstr "Tuo kirja"
 msgid ""
 "You don't have permissions to import content. At the moment only "
 "administrators can do that."
-msgstr ""
+msgstr "Sinulla ei ole oikeuksia tuoda sisältöä. Tällä hetkellä vain"
+"ylläpitäjät saavat tehdä niin."
 
 #: account/templates/account/import_book.html:19
 #, fuzzy
@@ -444,18 +449,21 @@ msgstr "Ole hyvä ja odota. Tässä menee pieni hetki. Kirjaasi tuodaan! "
 msgid ""
 "To reset your Booktype password, simply click the link below. That will take "
 "you to a web page where you can create a new password."
-msgstr ""
+msgstr "Päivittääksesi Booktypen salasanan voit yksinkertaisesti painaa linkkiä alla."
+"Tämä vie sinut sivulle, jossa voit luoda uuden salasanan."
 
 #: account/templates/account/password_reset_email.html:6
 msgid "Go to:"
-msgstr ""
+msgstr "Mene:"
 
 #: account/templates/account/password_reset_email.html:7
 msgid ""
 "If you weren't trying to reset your password, don't worry – your account is "
 "still secure and no one has been given access to it. Most likely, someone "
 "just mistyped their email address while trying to reset their own password."
-msgstr ""
+msgstr "Jos et yrittänyt nollata salasanaasi, älä huolestu - käyttäjätilisi "
+"on turvassa ja kukaan ei ole päässyt sen kimppuun. Ehkä joku vain kirjoitti "
+"sähköpostinsa väärin yrittäessään nollata salasanansa."
 
 #: account/templates/account/signin.html:6
 msgid "Booktype Sign In"
@@ -716,16 +724,16 @@ msgstr "Nollaa salasana"
 
 #: account/templates/account/view_profile.html:249
 msgid "Unable to change password. Old password is missing."
-msgstr ""
+msgstr "Salasanaa ei voi vaihtaa. Vanha salasana puuttuu."
 
 #: account/templates/account/view_profile.html:250
 msgid "Unable to change password. Old password is incorrect."
-msgstr ""
+msgstr "Salasanaa ei voi vaihtaa. Vanha salasana on väärin."
 
 #: account/templates/account/view_profile.html:251
 msgid ""
 "Unable to change password. The new and confirmation passwords are not equal."
-msgstr ""
+msgstr "Salasanaa ei voi vaihtaa. Uusi ja vahvistussalasana eivät ole sanmoja."
 
 #: account/templates/account/view_profile.html:253
 #, fuzzy
@@ -735,7 +743,7 @@ msgstr "Salasana"
 #: account/templates/account/view_profile.html:254
 #: portal/templates/base.html:192
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: account/templates/account/view_profile.html:255
 #: editor/templates/editor/edit_strings.html:8
@@ -745,7 +753,7 @@ msgstr ""
 #: editor/templates/editor/wizzard_odt.html:174
 #: editor/templates/editor/wizzard_pdf.html:288 portal/templates/base.html:193
 msgid "Back"
-msgstr ""
+msgstr "Takaisin"
 
 #: account/templates/account/view_profile.html:256
 #: editor/templates/editor/edit_book.html:653 portal/templates/base.html:194
@@ -778,7 +786,7 @@ msgstr "Luo ryhmä"
 #: account/templates/account/view_profile.html:260
 #: portal/templates/base.html:200
 msgid "enter epub URL"
-msgstr ""
+msgstr "kirjoita epub-kirjan URL"
 
 #: account/templates/account/view_profile.html:261
 #: portal/templates/base.html:201
@@ -1072,7 +1080,7 @@ msgstr "Julkaisuvelho"
 #: editor/models.py:503 editor/templates/editor/cover_manager.html:181
 #, fuzzy
 msgid "Cover title"
-msgstr "url-otsikko"
+msgstr "Kannessa oleva otsikko"
 
 #: editor/models.py:505 editor/templates/editor/cover_manager.html:150
 #: editor/templates/editor/cover_manager.html:275
@@ -1088,7 +1096,7 @@ msgstr "Korkeus:"
 
 #: editor/models.py:507
 msgid "Unit"
-msgstr ""
+msgstr "Yksikkö"
 
 #: editor/models.py:508
 #, fuzzy
@@ -1102,7 +1110,7 @@ msgstr "Kirjan muistiinpano"
 
 #: editor/models.py:511
 msgid "E-book cover"
-msgstr ""
+msgstr "E-kirjan kansi"
 
 #: editor/models.py:512
 #, fuzzy
@@ -1126,7 +1134,7 @@ msgstr "kansikuva"
 #: editor/models.py:521 editor/templates/editor/cover_manager.html:10
 #: editor/templates/editor/cover_manager.html:303
 msgid "Approved"
-msgstr ""
+msgstr "Sallittu"
 
 #: editor/templates/authors.html:13
 msgid "Modifications:"
@@ -1280,7 +1288,7 @@ msgstr "Ei uusia käyttäjiä"
 #: editor/templates/editor/cover_manager.html:4
 #: editor/templates/editor/edit_book.html:105
 msgid "Cover Manager"
-msgstr ""
+msgstr "Kannen hallinta"
 
 #: editor/templates/editor/cover_manager.html:7
 #, fuzzy
@@ -1306,7 +1314,12 @@ msgid ""
 "(in TIFF, XCF, PSD, PDF, PS, SVG, EPS, AI or INDD format) for the front "
 "cover, spine and back cover of your print books can be uploaded and managed, "
 "but will be kept separate from the text of the book when publishing it."
-msgstr ""
+msgstr "Kansikuvan hallintaohjelman avulla voit ladata, hallita ja julkaista kirjan kansia. "
+"Lataa e-kirjan kansikuvatiedostot (JPEG, GIF tai PNG -muodossa) sopivassa "
+"koossa EPUB, MOBI, ruudulta luettavaa PDF-tiedostoa ja ODF-dokumenttia varten."
+"Kansitaide (TIFF, XCF, PSD, PDF, PS, SVG, EPS, AI tai INDD -muodossa) etu- ja "
+"takakantta varten voidaan ladata ja hallita painettuja kirjoja varten, mutta "
+"se pidetään erillään kirjan tekstistä, kun kirja julkaistaan."
 
 #: editor/templates/editor/cover_manager.html:22
 #, fuzzy
@@ -1318,7 +1331,9 @@ msgid ""
 "Error: The selected filetype is not supported. Please select one of the "
 "following filetypes and try again: PNG, JPEG, GIF, TIFF, XCF, PSD, PDF, PS, "
 "SVG, EPS, AI, INDD."
-msgstr ""
+msgstr "Virhe: valittua tiedostotyyppiä ei tueta. Ole hyvä ja valitse yksi "
+"seuraavista tiedostotyypeistä ja yritä uudestaan: PNG, JPEG, GIF, TIFF, XCF, "
+"PSD, PDF, PS, SVG, EPS, AI, INDD."
 
 #: editor/templates/editor/cover_manager.html:43
 msgid ""
@@ -1700,7 +1715,7 @@ msgstr "Tallenna"
 
 #: editor/templates/editor/cover_manager.html:176
 msgid "Enter information"
-msgstr ""
+msgstr "Kirjoita tiedot"
 
 #: editor/templates/editor/cover_manager.html:279
 msgid "download file"
