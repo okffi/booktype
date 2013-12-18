@@ -83,11 +83,13 @@
     <!-- END Personal info -->
     <!-- Activity feed & mood box -->
     <aside class="activity-bar">
+    {% if request.user.is_authenticated %}
       <div id="mood"> {% if user.username == request.user.username %}
         {% user_messagefield "" %}
         {% else %}
         {% user_messagefield user.username %}
         {% endif %} </div>
+        {% endif %}
       <p>
       <div id="Xstatus_messages"> {% user_timeline user.username %} </div>
       </p>    </aside>    <!-- END Activity feed & mood box -->
