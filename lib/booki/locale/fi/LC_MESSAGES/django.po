@@ -77,7 +77,9 @@ msgstr "Luo kirja"
 msgid ""
 "You don't have permissions to create new books. At the moment only "
 "administrators can do that."
-msgstr "Sinulla ei ole oikeuksia luoda uusia kirjoja. Tällä hetkellä vain ylläpitäjät voivat luoda kirjoja."
+msgstr ""
+"Sinulla ei ole oikeuksia luoda uusia kirjoja. Tällä hetkellä "
+"vain ylläpitäjät voivat luoda kirjoja."
 
 #: account/templates/account/create_book.html:18
 msgid "Step 1"
@@ -157,9 +159,8 @@ msgstr "Jos sinulla on kuva kirjaa varten, voit lisätä sen nyt (tätä voi "
 "muuttaa myöhemmin)"
 
 #: account/templates/account/create_book.html:57
-#, fuzzy
 msgid "Book Image"
-msgstr "Kuva"
+msgstr "Kirjan kuva"
 
 #: account/templates/account/create_book.html:63
 msgid "Step 5"
@@ -167,44 +168,43 @@ msgstr "Askel 5"
 
 #: account/templates/account/create_book.html:63
 msgid "Make Public?"
-msgstr "Julkista?"
+msgstr "Julkaise?"
 
 #: account/templates/account/create_book.html:64
 msgid ""
 "Would you like to keep your book private or make it public? If the book is "
 "public others can find the book to help you."
-msgstr "Tahtoisitko pitää kirjasi yksityisenä vai julkaista sen? Jos kirja on "
+msgstr ""
+"Tahtoisitko pitää kirjasi yksityisenä vai julkaista sen? Jos kirja on "
 "julkinen, muut löytävät kirjan ja auttavat sinua."
 
 #: account/templates/account/create_book.html:65
 msgid ""
 "<strong>Note:</strong> this setting can be changed later from your dashboard."
 "</p>"
-msgstr "<strong>Huomaa:</strong> tätä asetusta voit muuttaa myöhemmin koelaudaltasi."
+msgstr ""
+"<strong>Huomaa:</strong> tätä asetusta voit muuttaa myöhemmin koelaudaltasi."
 "</p>"
 
 #: account/templates/account/create_book.html:67
-#, fuzzy
 msgid "Initially hide from others"
-msgstr "Piilota muilta"
+msgstr "Piilota aluksi muilta"
 
 #: account/templates/account/create_group.html:3
 msgid "Create a Group"
 msgstr "Luo ryhmä"
 
 #: account/templates/account/create_group.html:6
-#, fuzzy
 msgid "Group name:"
-msgstr "url-osoitteen nimi"
+msgstr "Ryhmän nimi:"
 
 #: account/templates/account/create_group.html:9
 msgid "There is already a group with this name."
 msgstr "Ryhmä, jolla on tämä nimi, on jo olemassa."
 
 #: account/templates/account/create_group.html:12
-#, fuzzy
 msgid "Description:"
-msgstr "Kuvaus"
+msgstr "Kuvaus:"
 
 #: account/templates/account/error_import.html:6
 #: account/templates/account/error_import.html:11
@@ -229,12 +229,11 @@ msgid "USERNAME OR E-MAIL ADDRESS"
 msgstr "SALASANA TAI SÄHKÖPOSTIOSOITE"
 
 #: account/templates/account/forgot_password.html:57
-#, fuzzy
 msgid ""
 "Give us your username or e-mail you used to create Booktype account and we "
 "will send you new password."
 msgstr ""
-"Anna käyttäjätunnuksesi tai sähköpostiosoite, jolla loit BookType-"
+"Anna käyttäjätunnuksesi tai sähköpostiosoite, jolla loit "
 "käyttäjätilisi ja lähetämme sinulle uuden salasanan. "
 
 #: account/templates/account/forgot_password.html:59
@@ -246,9 +245,8 @@ msgid "No such user."
 msgstr "Ei sellaista käyttäjää."
 
 #: account/templates/account/forgot_password.html:61
-#, fuzzy
 msgid "Unknown error."
-msgstr "Tuntematon virhe! "
+msgstr "Tuntematon virhe."
 
 #: account/templates/account/forgot_password.html:63
 #: account/templates/account/forgot_password_enter.html:55
@@ -260,11 +258,8 @@ msgid "Check your email!"
 msgstr "Lue sähköpostisi!"
 
 #: account/templates/account/forgot_password.html:71
-#, fuzzy
 msgid "Password reset instructions were sent to your email."
-msgstr ""
-"<h2>Katso sähköpostisi!</h2><p>Salasanan nollausohjeet lähetettiin "
-"sähköpostiisi.</p>"
+msgstr "Salasanan nollausohjeet lähetettiin sähköpostiisi."
 
 #: account/templates/account/forgot_password_enter.html:40
 msgid "Reset your password"
@@ -284,14 +279,12 @@ msgstr "UUSI SALASANA UUDESTAAN"
 
 #: account/templates/account/form_register.html:6
 #: account/templates/account/form_register.html:42
-#, fuzzy
 msgid "Registration"
-msgstr "kuvaus"
+msgstr "Rekisteröityminen"
 
 #: account/templates/account/form_register.html:8
-#, fuzzy
 msgid "User limit has been reached."
-msgstr "Käyttäjätilisi on luotu! "
+msgstr "Käyttäjien raja on saavutettu."
 
 #: account/templates/account/form_register.html:11
 #: account/templates/account/form_register.html:38
@@ -319,15 +312,15 @@ msgstr "Sähköposti"
 
 #: account/templates/account/form_register.html:24
 msgid "Missing username!"
-msgstr "Käyttäjätunnus puuttuu! "
+msgstr "Käyttäjätunnus puuttuu!"
 
 #: account/templates/account/form_register.html:25
 msgid "Missing e-mail!"
-msgstr "Sähköposti puuttuu! "
+msgstr "Sähköposti puuttuu!"
 
 #: account/templates/account/form_register.html:26
 msgid "Missing password!"
-msgstr "Salasana puuttuu! "
+msgstr "Salasana puuttuu!"
 
 #: account/templates/account/form_register.html:27
 msgid "Please provide your real name."
@@ -365,7 +358,7 @@ msgstr "Käyttäjänimi on jo käytössä. Kokeile jotain muuta. "
 #: account/templates/account/form_register.html:33
 #: account/templates/account/form_signin.html:17
 msgid "Unknown error!"
-msgstr "Tuntematon virhe! "
+msgstr "Tuntematon virhe!"
 
 #: account/templates/account/form_register.html:34
 msgid "Fullname is too long!"
@@ -407,7 +400,7 @@ msgstr "Sinulla ei ole oikeuksia tuoda sisältöä. Tällä hetkellä vain"
 #: account/templates/account/import_book.html:19
 #, fuzzy
 msgid "Import type:"
-msgstr "Valitse tuontityyppi."
+msgstr "Tuontityyppi:"
 
 #: account/templates/account/import_book.html:22
 msgid "Select Import Type"
@@ -436,14 +429,14 @@ msgid "New title (optional):"
 msgstr "Uusi otsikko (valinnainen)"
 
 #: account/templates/account/import_book.html:34
-#, fuzzy
 msgid "Initially hidden from others"
-msgstr "(tämä kirja on piilossa muilta)"
+msgstr "Aluksi piilossa muilta"
 
 #: account/templates/account/import_book.html:38
 msgid ""
 "Please wait. It will take couple of moments. Your book is being imported!"
-msgstr "Ole hyvä ja odota. Tässä menee pieni hetki. Kirjaasi tuodaan! "
+msgstr ""
+"Ole hyvä ja odota. Tässä menee pieni hetki. Kirjaasi tuodaan! "
 
 #: account/templates/account/password_reset_email.html:5
 msgid ""
