@@ -39,6 +39,25 @@
   </script> 
 {% endblock %}
 
+{% block sidebar %}
+<div style="margin-left:5px;width:100%; border: 1px solid #c0c0c0; background-color: #FFFFFF; padding: 5px;" id="mood">
+    <!-- Activity feed & mood box -->
+
+    {% if request.user.is_authenticated %}
+      <div id="mood"> {% if user.username == request.user.username %}
+        {% user_messagefield "" %}
+        {% else %}
+        {% user_messagefield user.username %}
+        {% endif %} </div>
+        {% endif %}
+      <p>
+      <div id="Xstatus_messages"> {% user_timeline user.username %} </div>
+      </p>    
+
+</div>
+{% endblock %}
+
+
 {% block content %}
 <h2>{% if user.username == request.user.username %}{% trans "My Dashboard" %}{% else %} {{user.username}} {% endif %}</h2>
 <div id="tabs">
@@ -81,20 +100,9 @@
       </section>
     </div>
     <!-- END Personal info -->
-    <!-- Activity feed & mood box -->
-    <aside class="activity-bar">
-    {% if request.user.is_authenticated %}
-      <div id="mood"> {% if user.username == request.user.username %}
-        {% user_messagefield "" %}
-        {% else %}
-        {% user_messagefield user.username %}
-        {% endif %} </div>
-        {% endif %}
-      <p>
-      <div id="Xstatus_messages"> {% user_timeline user.username %} </div>
-      </p>    </aside>    <!-- END Activity feed & mood box -->
+
     <!-- main content area-->
-    <div class="main-content">
+    <div style="width:70%;" class="main-content">
       <div class="alert-box info">{% blocktrans %}Do you want to learn more how to use Booktype? Read the  <a target="_new" title="Booktype user guide" href="http://en.flossmanuals.net/booktype"><i>user guide</i></a>!{% endblocktrans %} </div>
       <div class="widget-box">
         <h4> 

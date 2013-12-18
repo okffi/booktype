@@ -58,9 +58,18 @@
     </ul>      
   </div><!-- End of .navbox -->       
 </div>
-
 <div class="content-container">
-  <div class="content shadow">
+     <div class="sidebar">
+     
+        {% block sidebar %}
+
+
+
+        {% endblock %}
+
+     </div><!-- end .sidebar-->
+
+  <div style="width:70%;" class="content shadow">
     <!-- Content box and the drop shadow-->
     {% block content %}
     {% endblock %}

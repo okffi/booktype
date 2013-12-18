@@ -1,8 +1,20 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load messaging_tags i18n %}
 
 {% block header %}
  <title>{% trans "Booktype Books" %}</title>
+{% endblock %}
+
+{% block sidebar %}
+<div style="padding: 5px; background:#ffffff; margin-left:5px;" id="mood">
+<h4 class="group">Uutiset</h4>
+{% if request.user.is_authenticated %}
+<div id="mood">
+{% tag_messagefield 'uutiset' %}
+</div>
+{% endif %}
+<div class="group-timeline">{% tag_timeline 'uutiset' %}</div>
+</div>
 {% endblock %}
 
 {% block content %}

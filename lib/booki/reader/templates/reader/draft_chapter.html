@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n booki_tags %}
+{% load i18n messaging_tags booki_tags %}
 
 {% block header %}
  <title>{% blocktrans with chapter.title as chaptertitle and book.title as booktitle %}/chapter: {{ chaptertitle }} / {{ booktitle }}{% endblocktrans %}</title>
@@ -17,12 +17,23 @@
  <script type="text/javascript" src="{{ request.META.SCRIPT_NAME }}/site_static/js/draft.js"></script>
 {% endblock %}
 
+{% block sidebar %}
+<div style="margin-left:5px;width:100%; border: 1px solid #c0c0c0; background-color: #FFFFFF; padding: 5px;" id="mood">
+{% if request.user.is_authenticated %}
+{% book_followbutton book.url_title request.user.username %}
+<br>
+{% book_messagefield book.url_title %}
+<br>
+{% endif %}
+{% book_timeline book.url_title %}
+</div>
+{% endblock %}
 
 {% block content %}
 
 <h2>{{ book.title }}</h2>
 <div class="padded">
- <div id="bookmenu" style="background: url(/site_static/images/draft_bg.png) repeat !important;"> 
+ <div id="bookmenu"> 
   <ul>
    {% for chap in chapters %}
     {% ifnotequal chap.url_title  None%}
@@ -33,7 +44,7 @@
    {% endfor %}
   </ul>
  </div>
- <div id="bookcontent"   style="background: url(/site_static/images/draft_bg.png) repeat !important;">
+ <div id="bookcontent">
    {% if editing_enabled %}
      <div class="action-menu top">
       	<a href="{% url edit_book book.url_title %}#/edit/{{ content.url_title }}">{% trans "EDIT" %}</a>
