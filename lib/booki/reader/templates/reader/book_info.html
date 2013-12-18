@@ -227,5 +227,14 @@
 <div style="padding: 10px 0 20px 0;">
   <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">{% trans "Follow changes" %}</a>
 </div>
+<div style="padding: 5px;" id="mood">
+{% if request.user.is_authenticated %}
+{% book_followbutton book.url_title request.user.username %}
+<br>
+{% book_messagefield book.url_title %}
+<br>
+{% endif %}
+{% book_timeline book.url_title %}
+</div>
 </div>
 {% endblock %}
