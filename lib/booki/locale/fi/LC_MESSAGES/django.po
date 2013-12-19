@@ -132,7 +132,7 @@ msgid "Are you sure you would like to delete this book? You will lose all data a
 msgstr "Tahdotko varmasti poistaa tämän kirjan? Menetät kaiken kirjaan liitetyn tiedon etkä voi peruuttaa tätä toimintoa!"
 
 msgid "Are you sure you would like to delete this chapter? You will lose all data associated to this chapter and you will not be able to undo this operation!"
-msgstr ""
+msgstr "Oletko varma, että tahdot poistaa tämän luvun? Menetät kaiken lukuun liitetyn tiedon etkä voi peruuttaa tätä operaatiota!"
 
 msgid "Arial"
 msgstr ""
@@ -246,7 +246,7 @@ msgid "Book notes"
 msgstr "Kirjan muistiinpanot"
 
 msgid "Book notes saved."
-msgstr "Kirjan muistiinpanot"
+msgstr "Kirjan muistiinpanot."
 
 msgid "Book status"
 msgstr "Kirjan tila"
@@ -345,7 +345,7 @@ msgid "Cancel Page Break Control"
 msgstr ""
 
 msgid "Capitalise"
-msgstr ""
+msgstr "Iso alkukirjain"
 
 msgid "Century Schoolbook"
 msgstr " Century Schoolbook "
@@ -411,7 +411,7 @@ msgid "Collaborators:"
 msgstr "Kirjoittajat:"
 
 msgid "Column margin"
-msgstr ""
+msgstr "Palstojen marginaali"
 
 msgid "Columns"
 msgstr "Palstat"
@@ -420,7 +420,7 @@ msgid "Comment"
 msgstr "Kommentti"
 
 msgid "Compare revision <span class=\"revision1Name\">revision1</span> with revision <span class=\"revision2Name\">revision2</span>"
-msgstr "Vertaile revisiota <span class=\"revision1Name\">revision1</span> revisioon <span class=\"revision2Name\">revision2</span>."
+msgstr "Vertaile revisiota <span class=\"revision1Name\">revisio1</span> revisioon <span class=\"revision2Name\">revisio2</span>."
 
 msgid "Compare revisions"
 msgstr "Vertaile versioita"
@@ -444,10 +444,10 @@ msgid "Couldn't create a group!"
 msgstr "Ei voi luoda ryhmää!"
 
 msgid "Courier"
-msgstr ""
+msgstr "Courier"
 
 msgid "Courier New"
-msgstr ""
+msgstr " Courier New"
 
 msgid "Cover"
 msgstr "kansikuva"
@@ -630,7 +630,7 @@ msgid "Endpoints"
 msgstr "Päätepisteet"
 
 msgid "Enter Chapter id."
-msgstr "Kirjoita luvun tunnus"
+msgstr "Kirjoita luvun tunnus."
 
 msgid "Enter Meta-data"
 msgstr "Metatieto"
@@ -729,7 +729,7 @@ msgid "Format"
 msgstr ""
 
 msgid "Formatted"
-msgstr ""
+msgstr "Muotoiltu"
 
 msgid "Front Cover"
 msgstr ""
@@ -780,19 +780,19 @@ msgid "Groups"
 msgstr "Ryhmät"
 
 msgid "Gutter"
-msgstr ""
+msgstr "Palstojen väli"
 
 msgid "Heading 1"
-msgstr ""
+msgstr "Otsikko 1"
 
 msgid "Heading 2"
-msgstr ""
+msgstr "Otsikko 2"
 
 msgid "Heading 3"
-msgstr ""
+msgstr "Otsikko 3"
 
 msgid "Heavy"
-msgstr ""
+msgstr "Raskas"
 
 msgid "Height"
 msgstr "Korkeus:"
@@ -831,7 +831,7 @@ msgid "I forgot my username ?"
 msgstr "Unohdin käyttäjätunnukseni? "
 
 msgid "I understand and agree"
-msgstr ""
+msgstr "Ymmärrän ja suostun"
 
 msgid "IMPORT CHAPTER"
 msgstr "TUO LUKU"
@@ -1546,7 +1546,7 @@ msgid "Style"
 msgstr "Tyyli"
 
 msgid "Submit"
-msgstr ""
+msgstr "Lähetä"
 
 msgid "Switched to <span class=\"entryVersion\">entry.version.version</span>"
 msgstr "Muutettu versioon <span class=\"entryVersion\">entry.version.version</span>"
@@ -1645,7 +1645,7 @@ msgid "Total number of users:"
 msgstr "Käyttäjien kokonaismäärä:"
 
 msgid "Try out our new beta renderer for Books"
-msgstr ""
+msgstr "Kokeile uutta beta-renderöijäämme kirjoille."
 
 msgid "Type"
 msgstr ""
@@ -1663,7 +1663,7 @@ msgid "UK Tabloid (279mm x 431mm)"
 msgstr ""
 
 msgid "UPPERCASE"
-msgstr ""
+msgstr "ISOT KIRJAIMET"
 
 msgid "US Broadsheet (380mm x 577mm)"
 msgstr ""
@@ -2059,7 +2059,7 @@ msgid "line"
 msgstr "rivi"
 
 msgid "lowercase"
-msgstr ""
+msgstr "pienet kirjaimet"
 
 msgid "major"
 msgstr "suuri"
@@ -2094,7 +2094,7 @@ msgid "none"
 msgstr ""
 
 msgid "normal"
-msgstr ""
+msgstr "normaali"
 
 msgid "not published"
 msgstr "ei julkaistu"
