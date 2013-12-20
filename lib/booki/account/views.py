@@ -511,6 +511,12 @@ def save_settings(request, username):
     user.save()
 
     profile.description = request.POST.get('aboutyourself', '')
+    profile.homepage = request.POST.get('homepage', '')
+    profile.title = request.POST.get('title', '')
+    profile.gplus = request.POST.get('gplus', '')
+    profile.twitter = request.POST.get('twitter', '')
+    profile.facebook = request.POST.get('facebook', '')
+    profile.github = request.POST.get('github', '')    
 
     if request.FILES.has_key('profile'):
         from booki.utils import misc

@@ -39,6 +39,12 @@ class UserProfile(models.Model):
     image = models.ImageField(_('image'), upload_to=settings.PROFILE_IMAGE_UPLOAD_DIR, null=True)
     description = models.CharField(_('description'), max_length=2500, blank=False,null=False,default='')
     user = models.ForeignKey(User, unique=True, verbose_name=_("user"))
+    gplus = models.URLField(_('gplus'), max_length=100, blank=True, null=False, default='')
+    facebook = models.URLField(_('facebook'), max_length=100, blank=True, null=False, default='')
+    twitter = models.URLField(_('twitter'), max_length=100, blank=True, null=False, default='')
+    github = models.URLField(_('github'), max_length=100, blank=True, null=False, default='')
+    homepage = models.URLField(_('homepage'), max_length=100, blank=True, null=False, default='') 
+    title = models.CharField(_('title'), max_length=100, blank=True, null=False, default='') 
 
 class UserPassword(models.Model):
     """

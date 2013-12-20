@@ -74,9 +74,15 @@
       <section class="basic-info">
           <h4>{{ user.username }}</h4>
           <p>{{ user.first_name }}</p>
+          <p>{{ user.get_profile.title }}</p>
+          <p><a href="{{ user.get_profile.homepage }}"></a>{{ user.get_profile.homepage }}</p>
           <figure>
                 {% profile_image  user %}
           </figure>
+          <p><a href="{{ user.get_profile.facebook }}">{{ user.get_profile.facebook }}</a></p>
+          <p><a href="{{ user.get_profile.gplus }}">{{ user.get_profile.gplus }}</a></p>
+          <p><a href="{{ user.get_profile.twitter }}">{{ user.get_profile.twitter }}</a></p>
+          <p><a href="{{ user.get_profile.github }}">{{ user.get_profile.github }}</a></p>          
       </section>
       <section>
           <p>{% if user.username != request.user.username %}
@@ -214,6 +220,30 @@
     <dt><label>{% trans "Profile image" %}</label></dt>
     <dd>
       <input type="file" name="profile"/>
+    </dd>
+        <dt><label>Title</label></dt>
+    <dd>
+      <input type="text" name="title" value="{{ user.get_profile.title }}"/>
+    </dd>
+    <dt><label>Homepage</label></dt>
+    <dd>
+      <input type="text" name="homepage" value="{{ user.get_profile.homepage }}"/>
+    </dd>
+    <dt><label>Link to Facebook profile</label></dt>
+    <dd>
+      <input type="text" name="facebook" value="{{ user.get_profile.facebook }}"/>
+    </dd>
+        <dt><label>Link to Twitter profile</label></dt>
+    <dd>
+      <input type="text" name="twitter" value="{{ user.get_profile.twitter }}"/>
+    </dd>
+        <dt><label>Link to Google Plus profile</label></dt>
+    <dd>
+      <input type="text" name="gplus" value="{{ user.get_profile.gplus }}"/>
+    </dd>
+        <dt><label>Link to Github profile</label></dt>
+    <dd>
+      <input type="text" name="github" value="{{ user.get_profile.github }}"/>
     </dd>
     <dt><label>{% trans "Notification filter" %}</label></dt>
     <dd>
