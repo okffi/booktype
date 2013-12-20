@@ -42,6 +42,8 @@ class Post(models.Model):
             url = None
             if part.startswith("@"):
                 url = reverse("view_profile", args=[part[1:]])
+            elif part.startswith("http:"):
+            	 url = part
             elif part.startswith("!"):
                 url = reverse("view_group", args=[part[1:]])
             elif part.startswith(u"\u212c"):
