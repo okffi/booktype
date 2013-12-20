@@ -19,10 +19,21 @@ body {
 	padding:0;
 }
 
-a {text-decoration: none;}
-a:link {color:#ff7f00;text-decoration: underline;}
-a:visited {color: #ff7f00;text-decoration: underline;}
-a:hover {text-decoration: none;}
+a {
+	text-decoration: underline;
+}
+a:link {
+	color:#ff7f00;
+	text-decoration: underline;
+	}
+a:visited {
+	color: #ff7f00;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+	text-shadow: 0px 0px 2px #ff7f00;
+}
 img {
        border-style:none;
        max-width:540px;        
@@ -38,7 +49,6 @@ h1 {
 	color:#ff7f00;
 }
 h2 {
-	text-transform:uppercase;
 	font-size:2em;
 	margin:0px;
 	padding: 5px;
@@ -687,6 +697,11 @@ input[type="submit"], input[type="reset"], button {
 	border-radius:1px !important;
 	-moz-border-radius:1px !important;
 	-webkit-border-radius:1px !important;
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
 }
 input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
 	display:inline-block;
@@ -702,6 +717,11 @@ input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
 	border:1px solid #ff7f00;
 	text-decoration:none !important;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
 }
 
 .alert-box { 
@@ -875,15 +895,16 @@ input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
 	background: linear-gradient(top,  #fafafa 0%,#f7f7f7 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#f7f7f7',GradientType=0 ); /* IE6-9 */
 	color:#444444 !important;
-	padding:2px 10px;
+	padding:10px;
+	margin-top: 10px;
 	line-height:110%;
 	border:1px solid #bcbcbc;
 	font-family:Arial, Helvetica, sans-serif;
 	text-decoration:none !important;
 	text-transform:uppercase;
-	border-radius:1px !important;
-	-moz-border-radius:1px !important;
-	-webkit-border-radius:1px !important;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
 	font-size:10px;
 	margin:0 4px 0 0;
 	float:left;
@@ -898,34 +919,48 @@ input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
 	margin:0 0 0 4px !important;
 }
 .chapterLinks a.prime, #chapteraction a.prime, .action-button.prime, a.action-button.prime, .action-menu a.prime {
-	background: #6f519b; /* Old browsers */
-	background: -moz-linear-gradient(top,  #8166a7 0%, #5d3a8e 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8166a7), color-stop(100%,#5d3a8e)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #8166a7 0%,#5d3a8e 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #8166a7 0%,#5d3a8e 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #8166a7 0%,#5d3a8e 100%); /* IE10+ */
-	background: linear-gradient(top,  #8166a7 0%,#5d3a8e 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8166a7', endColorstr='#5d3a8e',GradientType=0 ); /* IE6-9 */
+	background: #ff7f00; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff7f00 0%, #ff7f00 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7f00), color-stop(100%,#ff7f00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff7f00 0%,#ff7f00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff7f00 0%,#ff7f00 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff7f00 0%,#ff7f00 100%); /* IE10+ */
+	background: linear-gradient(top,  #ff7f00 0%,#ff7f00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7f00', endColorstr='#ff7f00',GradientType=0 ); /* IE6-9 */
 	border:1px solid #ff7f00;
 	color:#FFF !important;
-	
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
 }
 .chapterLinks a:hover, #chapteraction a:hover, .action-button:hover, a.action-button:hover, .action-menu a:hover, .chapteredit a:hover  {
-	border:1px solid #6f6f6f;
+	border:1px solid #ff7f00;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	text-decoration:none !important;
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
 	}
 .chapterLinks a.prime:hover, #chapteraction a.prime:hover, .action-button.prime:hover, a.action-button.prime:hover, .action-menu a.prime:hover {
-	background: #ff7f00; /* Old browsers */
-	background: -moz-linear-gradient(top,  #6f519b 0%, #ff7f00 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6f519b), color-stop(100%,#ff7f00)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #6f519b 0%,#ff7f00 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #6f519b 0%,#ff7f00 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #6f519b 0%,#ff7f00 100%); /* IE10+ */
-	background: linear-gradient(top,  #6f519b 0%,#ff7f00 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f519b', endColorstr='#ff7f00',GradientType=0 ); /* IE6-9 */
-	border:1px solid #3d1e69;
-	color:#FFF !important;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7f00), color-stop(100%,#ff7f00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%, #ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%, #ffffff 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 0%, #ffffff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	border:1px solid #ff7f00;
+	color:#ff7f00 !important;
+	-webkit-transition: all 1s linear;
+	-moz-transition: all 1s linear;
+	-ms-transition: all 1s linear;
+	-o-transition: all 1s linear;
+	transition: all 1s linear;
 }
 
 .chapterLinks a.deletechapter:hover {  
@@ -1025,7 +1060,7 @@ input[type="submit"][disabled]:focus, button[disabled]:focus {
 	padding-left:6px;
 }
 .attachmentsTable td a, .historyTable td a, .basic-table td a {
-	color:#6f519b !important;
+	color:#ff7f00 !important;
 	text-decoration:none !important
 }
 .attachmentsTable td a:hover, .historyTable td a:hover, .basic-table td a:hover, .basic-table td a.action-button:hover {
@@ -1203,7 +1238,7 @@ div.list.list-container {
 	background:url(../images/icon_rss.png) no-repeat 0 1px;
 	display:inline-block;
 	padding:0 0 0 18px;
-	color: #5D3A8E !important;
+	color: #ff7f00 !important;
 }
 .activity-bar {
 	float:right;
@@ -1219,7 +1254,7 @@ div.list.list-container {
 		color:#ff7f00;
 		margin:0 0 10px 0;
 		
-		background:#8166a7;
+		background:#ff7f00;
 		border-radius: 3px 3px 3px 3px;
 		color: #FFFFFF;
 		padding: 3px 8px;
@@ -1267,7 +1302,7 @@ div.list.list-container {
 		font-size:12px;
 		}
 		#mood .myheader a {
-			color:#5d3a8e;
+			color:#ffffff;
 			text-decoration:none !important;
 			}
 			#mood .myheader a:hover {
@@ -1291,7 +1326,7 @@ div.list.list-container {
 		color:#515151;
 	}
 	#Xstatus_messages a, .group-timeline a  {
-		color:#8166a7;
+		color:#ff7f00;
 	 	}
 		#Xstatus_messages a.sender, .group-timeline a.sender {
 			font-weight:bold;
@@ -1319,7 +1354,7 @@ div.list.list-container {
 				border: 1px solid #c6c6c6;
 				}
 		.post-container a  {
-			color:#8166a7;
+			color:#ff7f00;
 			}
 			.post-container a.sender {
 				font-weight:bold;
@@ -1622,11 +1657,11 @@ label.checbox-label input[type="checkbox"] {
 		 border-bottom:1px dotted #ebebeb;
 		}
 		#bookmenu ul li a {
-			 color:#6f519b !important;
+			 color:#ff7f00 !important;
 			 text-decoration:none;
 			}
 			#bookmenu ul li a:hover {
-				 color:#6f519b !important;
+				 color:#ff7f00 !important;
 				 text-decoration:underline;
 				}
 
@@ -1637,6 +1672,7 @@ label.checbox-label input[type="checkbox"] {
 }
 .action-menu {
 	text-align:right;
+	margin-top:10px;
 }
 .action-menu.big {
 	padding-bottom:4px;
