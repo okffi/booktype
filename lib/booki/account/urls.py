@@ -28,13 +28,6 @@ urlpatterns = patterns('',
 
     url(r'^signout/$', 'booki.account.views.signout', name='signout'),  
 
-# to be removed                       
-#    url(r'^register/$', 'booki.account.views.register', name='register'),
-
-    # Username
-    # Letters, digits and @/./+/-/_ only.
-    # For now, even space.                       
-
     url(r'^(?P<username>[\w\d\@\.\+\-\_\s]+)/$', 'booki.account.views.view_profile', name='view_profile'),
 
     url(r'^(?P<username>[\w\d\@\.\+\-\_\s]+)/_create_book/$', 'booki.account.views.create_book', name='create_book'),

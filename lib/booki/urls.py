@@ -17,7 +17,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 from django.views.generic.simple import direct_to_template
-
+from social_auth.views import auth, complete, disconnect
 
 # By default Django admin interface is turned off. If you want it you will need to uncomment couple of lines here.
 from django.contrib import admin
@@ -100,7 +100,6 @@ else:
                            url(r'^_utils/attachmentinfo/(?P<bookid>[\w\s\_\.\-\d]+)/(?P<version>[\w\d\.\-]+)/(?P<attachment>.*)$', 'booki.utils.pages.attachmentinfo'),                      
 
                            (r'^robots.txt$', direct_to_template, {'template':'robots.txt', 'mimetype':'text/plain'}),
-									(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
                            # export
                            url(r'^export/(?P<bookid>[\w\s\_\.\-]+)/export/{0,1}$',  'booki.editor.views.export', name='export_booki'), 
@@ -110,6 +109,21 @@ else:
 
                            # messaging application
                            url(r'^messaging/', include('booki.messaging.urls')),
+                           
+                           # authentication
+                           url(r'', include('social_auth.urls')),
+									
+							    	# authentication
+    								url(r'^login/(?P<backend>[^/]+)/$', auth, name='socialauth_begin'),
+    								url(r'^complete/(?P<backend>[^/]+)/$', complete, name='socialauth_complete'),
+
+		    						# associate
+    								url(r'^associate/(?P<backend>[^/]+)/$', auth, name='socialauth_associate_begin'),
+    								url(r'^associate/complete/(?P<backend>[^/]+)/$', complete, name='socialauth_associate_complete'),
+    
+    								# disconnection
+    								url(r'^disconnect/(?P<backend>[^/]+)/$', disconnect, name='socialauth_disconnect'),
+    								url(r'^disconnect/(?P<backend>[^/]+)/(?P<association_id>[^/]+)/$', disconnect, name='socialauth_disconnect_individual'),
 									
                            # reader
                            url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls'))

@@ -77,3 +77,5 @@ def add_user_profile ( sender, instance, created, **kwargs ):
         user_profile.save()
 
 models.signals.post_save.connect (add_user_profile, sender = User)
+
+
