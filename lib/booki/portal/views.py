@@ -455,3 +455,19 @@ def view_books_by_id(request, scheme):
 
     response = HttpResponse(s, mimetype="application/json")
     return response
+
+ views.sitemap(request, sitemaps, section=None, template_name='sitemap.xml', mimetype='application/xml')¶
+
+	from django.contrib.sitemaps import Sitemap
+
+   books = models.Book.objects.filter(hidden=False)
+
+	class BookSitemap(Sitemap):
+   	 changefreq = "monthly"
+    	 priority = 0.5
+
+    def items(self):
+        return Entry.objects.filter(hidden=False)
+
+    def lastmod(self, obj):
+        return obj.pub_date

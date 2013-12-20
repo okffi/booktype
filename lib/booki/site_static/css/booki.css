@@ -292,12 +292,14 @@ body > .content-container {
 body > .content-container.with-sidebar .content {
 	margin: 10px 31% 10px 0;
 }
+
 .sidebar	{
 	width:25%;
 	float:right;
 	margin-left: 0px;
 	padding-left: 0px;
 }
+
 .shadow {
    -moz-box-shadow: 0px 1px 2px #aaa; /* FF3.5+ */
   	-webkit-box-shadow: 0px 1px 2px #aaa; /* Saf3.0+, Chrome */
@@ -400,7 +402,7 @@ select {
 	float: left; 
 	margin-right: 10px; 
 	width: 48px; 
-	height: 48x;
+	height: 48px;
 }
 .recent-activity > .image img	{
 	border: 1px solid #9d9d9d;

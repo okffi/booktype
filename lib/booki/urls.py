@@ -100,6 +100,7 @@ else:
                            url(r'^_utils/attachmentinfo/(?P<bookid>[\w\s\_\.\-\d]+)/(?P<version>[\w\d\.\-]+)/(?P<attachment>.*)$', 'booki.utils.pages.attachmentinfo'),                      
 
                            (r'^robots.txt$', direct_to_template, {'template':'robots.txt', 'mimetype':'text/plain'}),
+									(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 
                            # export
                            url(r'^export/(?P<bookid>[\w\s\_\.\-]+)/export/{0,1}$',  'booki.editor.views.export', name='export_booki'), 
@@ -109,7 +110,7 @@ else:
 
                            # messaging application
                            url(r'^messaging/', include('booki.messaging.urls')),
-
+									
                            # reader
                            url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls'))
                            )
