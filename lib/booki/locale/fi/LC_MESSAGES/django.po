@@ -5,17 +5,17 @@ msgstr ""
 "Project-Id-Version: Booktype\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-05 19:22+0200\n"
-"PO-Revision-Date: 2013-04-08 17:29+0100\n"
-"Last-Translator: Daniel James <daniel.james@sourcefabric.org>\n"
-"Language-Team: English Localization <contact@sourcefabric.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2013-12-20 02:03+0200\n"
+"Last-Translator: Tomi Toivio <tomi@flossmanuals.net\n"
+"Language-Team: Finnish FLOSS Manuals <tomi@flossmanuals.net>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
 
 msgid "\"{0}\" is being published."
-msgstr ""
+msgstr " \"{0}\" on julkaistavana. "
 
 msgid "(this book is hidden from others)"
 msgstr "(tämä kirja on piilossa muilta)"
@@ -69,7 +69,7 @@ msgid "ADD THIS BOOK TO GROUP"
 msgstr "LISÄÄ TÄMÄ KIRJA RYHMÄÄN"
 
 msgid "APPROVED"
-msgstr ""
+msgstr "HYVÄKSYTTY"
 
 msgid "About yourself"
 msgstr "Tietoa sinusta"
@@ -84,7 +84,7 @@ msgid "Active people"
 msgstr "Aktiiviset ihmiset"
 
 msgid "Activity"
-msgstr "Toimintaa"
+msgstr "Toiminto"
 
 msgid "Add"
 msgstr "Lisää"
@@ -99,7 +99,7 @@ msgid "Administrator"
 msgstr "Ylläpitäjä"
 
 msgid "Advanced"
-msgstr ""
+msgstr "Kehittynyt"
 
 msgid "Advanced (style sheets)"
 msgstr "Kehittynyt (tyylitiedostot)"
@@ -123,10 +123,10 @@ msgid "Alt:"
 msgstr "Vaihtoehtoinen teksti:"
 
 msgid "Approval status"
-msgstr "Mahdolliset tilat:"
+msgstr "Hyväksynnän tila"
 
 msgid "Approved"
-msgstr "Sallittu"
+msgstr "Hyväksytty"
 
 msgid "Are you sure you would like to delete this book? You will lose all data associated to this book and you will not be able to undo this operation!"
 msgstr "Tahdotko varmasti poistaa tämän kirjan? Menetät kaiken kirjaan liitetyn tiedon etkä voi peruuttaa tätä toimintoa!"
@@ -135,7 +135,7 @@ msgid "Are you sure you would like to delete this chapter? You will lose all dat
 msgstr "Oletko varma, että tahdot poistaa tämän luvun? Menetät kaiken lukuun liitetyn tiedon etkä voi peruuttaa tätä operaatiota!"
 
 msgid "Arial"
-msgstr ""
+msgstr " Arial"
 
 msgid "Attach file"
 msgstr "Liitä tiedosto"
@@ -162,7 +162,7 @@ msgid "Available statuses:"
 msgstr "Mahdolliset tilat:"
 
 msgid "Avoid page break in paragraphs?"
-msgstr ""
+msgstr "Vältä sivunvaihtoa kappaleen sisällä?"
 
 msgid "B1 (707mm x 1000mm)"
 msgstr ""
@@ -180,7 +180,7 @@ msgid "B5 (176mm x 250mm)"
 msgstr ""
 
 msgid "BOOK"
-msgstr ""
+msgstr "KIRJA"
 
 msgid "BOOKS: %(n_books)s"
 msgstr "KIRJAT: %(n_books)s"
@@ -189,10 +189,10 @@ msgid "Back"
 msgstr "Takaisin"
 
 msgid "Back Cover"
-msgstr "kansikuva"
+msgstr "Takakansi"
 
 msgid "Back cover"
-msgstr "kansikuva"
+msgstr "Takakansi"
 
 msgid "Background color:"
 msgstr "Taustaväri:"
@@ -201,19 +201,19 @@ msgid "Berliner (315mm x 470mm)"
 msgstr ""
 
 msgid "Body Text"
-msgstr ""
+msgstr "Leipäteksti"
 
 msgid "Book"
 msgstr "Kirja"
 
 msgid "Book Formatted PDF Settings"
-msgstr ""
+msgstr "Kirjaksi muotoillun PDF-tiedoston asetukset"
 
 msgid "Book Image"
 msgstr "Kirjan kuva"
 
 msgid "Book Size"
-msgstr "Kirjan muistiinpano"
+msgstr "Kirjan koko"
 
 msgid "Book TOC"
 msgstr "Kirjan sisällysluettelo"
@@ -222,7 +222,7 @@ msgid "Book TOCs"
 msgstr "Kirjan sisällysluettelot"
 
 msgid "Book cover"
-msgstr "Kirjan muistiinpano"
+msgstr "Kirjan kansi"
 
 msgid "Book create"
 msgstr "Luo kirja"
@@ -246,7 +246,7 @@ msgid "Book notes"
 msgstr "Kirjan muistiinpanot"
 
 msgid "Book notes saved."
-msgstr "Kirjan muistiinpanot."
+msgstr "Kirjan muistiinpanot tallennettu."
 
 msgid "Book status"
 msgstr "Kirjan tila"
@@ -261,7 +261,7 @@ msgid "Books"
 msgstr "Kirjat"
 
 msgid "Booksize"
-msgstr "Kirjan muistiinpano"
+msgstr "Kirjan koko"
 
 msgid "Booktype"
 msgstr "Booktype"
@@ -294,7 +294,7 @@ msgid "Border:"
 msgstr "Raja:"
 
 msgid "Bottom Margin"
-msgstr "Marginaali:"
+msgstr "Alamarginaali"
 
 msgid "CANCEL"
 msgstr "PERUUTA"
@@ -342,7 +342,7 @@ msgid "Cancel"
 msgstr "Peruuta"
 
 msgid "Cancel Page Break Control"
-msgstr ""
+msgstr "Peruuta sivunvaihtojen hallinta"
 
 msgid "Capitalise"
 msgstr "Iso alkukirjain"
@@ -351,7 +351,7 @@ msgid "Century Schoolbook"
 msgstr " Century Schoolbook "
 
 msgid "Change password"
-msgstr "Nollaa salasana"
+msgstr "Vaihda salasana"
 
 msgid "Chapter"
 msgstr "Luku"
@@ -405,7 +405,7 @@ msgid "Cloning chapter"
 msgstr "Kopioidaan luku"
 
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 msgid "Collaborators:"
 msgstr "Kirjoittajat:"
@@ -423,13 +423,13 @@ msgid "Compare revision <span class=\"revision1Name\">revision1</span> with revi
 msgstr "Vertaile revisiota <span class=\"revision1Name\">revisio1</span> revisioon <span class=\"revision2Name\">revisio2</span>."
 
 msgid "Compare revisions"
-msgstr "Vertaile versioita"
+msgstr "Vertaile revisioita"
 
 msgid "Context"
 msgstr "Konteksti"
 
 msgid "Contributors"
-msgstr ""
+msgstr "Kirjoittajat"
 
 msgid "Control Center"
 msgstr "Hallintakeskus"
@@ -438,7 +438,7 @@ msgid "Copy or import Booktype book"
 msgstr "Kopioi tai tuo BookType-kirja"
 
 msgid "Couldn't create a group"
-msgstr "Luo ryhmä"
+msgstr "Ei voinut luoda ryhmää."
 
 msgid "Couldn't create a group!"
 msgstr "Ei voi luoda ryhmää!"
@@ -450,7 +450,7 @@ msgid "Courier New"
 msgstr " Courier New"
 
 msgid "Cover"
-msgstr "kansikuva"
+msgstr "Kansi"
 
 msgid "Cover Manager"
 msgstr "Kannen hallinta"
@@ -459,7 +459,7 @@ msgid "Cover title"
 msgstr "Kannessa oleva otsikko"
 
 msgid "Cover type"
-msgstr "Valitse tuontityyppi."
+msgstr "Kannen tyyppi"
 
 msgid "Create"
 msgstr "Luo"
@@ -504,7 +504,7 @@ msgid "Creating section"
 msgstr "Luodaan osa"
 
 msgid "Creator"
-msgstr "Luo"
+msgstr "Tekijä"
 
 msgid "Current chapter content will be reverted to this revision. Are you sure?"
 msgstr "Nykyisen luvun sisältö palautetaan tähän revisioon. Oletko varma? "
@@ -516,13 +516,13 @@ msgid "Currently editing"
 msgstr "Muokkaa tällä hetkellä"
 
 msgid "Custom Size"
-msgstr ""
+msgstr "Räätälöity koko"
 
 msgid "DIGEST (139mm x 215mm)"
 msgstr ""
 
 msgid "Dashboard"
-msgstr "Kojelautani"
+msgstr "Kojelauta"
 
 msgid "Database size:"
 msgstr "Tietokannan koko:"
@@ -540,10 +540,10 @@ msgid "Delete book"
 msgstr "Poista kirja"
 
 msgid "Delete chapter"
-msgstr "Luo luku"
+msgstr "Poista luku"
 
 msgid "Delete cover"
-msgstr "kansikuva"
+msgstr "Poista kansi"
 
 msgid "Delete selected attachments"
 msgstr "Poista valitut liitetiedostot"
@@ -573,13 +573,13 @@ msgid "Description:"
 msgstr "Kuvaus:"
 
 msgid "Do you really want to delete this cover?"
-msgstr ""
+msgstr "Tahdotko todella poistaa tämän kannen?"
 
 msgid "Do you want to learn more how to use Booktype? Read the  <a target=\"_new\" title=\"Booktype user guide\" href=\"http://en.flossmanuals.net/booktype\"><i>user guide</i></a>!"
 msgstr "Tahdotko oppia käyttämään Booktypeä? <a target=\"_new\" title=\"Booktypen käyttöohje\" href=\"http://en.flossmanuals.net/booktype\"><i>käyttöohje</i></a>!"
 
 msgid "E-BOOK"
-msgstr ""
+msgstr "E-KIRJA"
 
 msgid "E-book"
 msgstr "eKirja"
@@ -597,7 +597,7 @@ msgid "Ebook Settings"
 msgstr "Ekirjan asetukset"
 
 msgid "Edit"
-msgstr "Editori"
+msgstr "Muokkaa"
 
 msgid "Edit Book Info"
 msgstr "Muokkaa kirjan tietoa"
@@ -633,7 +633,7 @@ msgid "Enter Chapter id."
 msgstr "Kirjoita luvun tunnus."
 
 msgid "Enter Meta-data"
-msgstr "Metatieto"
+msgstr "Syötä metatieto"
 
 msgid "Enter book id"
 msgstr "Kirjoita kirjan tunnus"
@@ -660,19 +660,19 @@ msgid "Error while uploading file!"
 msgstr "Virhe tiedostoa ladattaessa!"
 
 msgid "Error: The selected file is bigger than 15MB. Please select a smaller file and try again."
-msgstr ""
+msgstr "Virhe: valittu tiedosto on suurempi kuin 15MB. Valitse pienempi tiedosto ja yritä uudestaan."
 
 msgid "Error: The selected filetype is not supported. Please select one of the following filetypes and try again: PNG, JPEG, GIF, TIFF, XCF, PSD, PDF, PS, SVG, EPS, AI, INDD."
 msgstr "Virhe: valittua tiedostotyyppiä ei tueta. Ole hyvä ja valitse yksi seuraavista tiedostotyypeistä ja yritä uudestaan: PNG, JPEG, GIF, TIFF, XCF, PSD, PDF, PS, SVG, EPS, AI, INDD."
 
 msgid "Excluded contributors"
-msgstr ""
+msgstr "Poistetut kirjoittajat"
 
 msgid "Filename"
-msgstr "tiedostonimi"
+msgstr "Tiedostonimi"
 
 msgid "Filetype"
-msgstr ""
+msgstr "Tiedostotyyppi"
 
 msgid "Follow changes"
 msgstr "Seuraa muutoksia"
@@ -690,34 +690,34 @@ msgid "Follow this tag"
 msgstr "Seuraa tätä tagia"
 
 msgid "Followers:"
-msgstr "seuraaja"
+msgstr "Seuraajat:"
 
 msgid "Following"
 msgstr "Seuraa"
 
 msgid "Following tags:"
-msgstr "Seuraamiset"
+msgstr "Seuraa tageja:"
 
 msgid "Following:"
-msgstr "Seuraa"
+msgstr "Seuraa:"
 
 msgid "Followings"
 msgstr "Seuraamiset"
 
 msgid "Font"
-msgstr ""
+msgstr "Kirjasin"
 
 msgid "Fontin Sans"
-msgstr ""
+msgstr "Fontin Sans"
 
 msgid "Foolscap (F4) (210mm x 330mm)"
 msgstr ""
 
 msgid "For RTL books on LTR printing presses, and vice versa."
-msgstr ""
+msgstr "Teksti oikealta vasemmalle painossa ja päinvastoin."
 
 msgid "Force Embed Fonts"
-msgstr ""
+msgstr "Pakota sulautetut kirjasimet"
 
 msgid "Forgot Password"
 msgstr "Salasana unohtui"
@@ -726,22 +726,22 @@ msgid "Forgot your password"
 msgstr "Unohdit salasanasi"
 
 msgid "Format"
-msgstr ""
+msgstr "formaatti"
 
 msgid "Formatted"
 msgstr "Muotoiltu"
 
 msgid "Front Cover"
-msgstr ""
+msgstr "Etukansi"
 
 msgid "Front cover"
-msgstr "kansikuva"
+msgstr "Etukansi"
 
 msgid "Full Cover"
-msgstr "Koko nimi"
+msgstr "Koko kansi"
 
 msgid "Full cover"
-msgstr "kansikuva"
+msgstr "Koko kansi"
 
 msgid "Full name"
 msgstr "Koko nimi"
@@ -750,7 +750,7 @@ msgid "Fullname is too long!"
 msgstr "Koko nimi on liian pitkä! "
 
 msgid "General"
-msgstr ""
+msgstr "Yleinen"
 
 msgid "Gentium"
 msgstr " Gentium"
@@ -765,7 +765,7 @@ msgid "Go to:"
 msgstr "Mene:"
 
 msgid "Grey Scale Output"
-msgstr ""
+msgstr "Ulostulo harmaasävyinä"
 
 msgid "Group"
 msgstr "Ryhmä"
@@ -795,13 +795,13 @@ msgid "Heavy"
 msgstr "Raskas"
 
 msgid "Height"
-msgstr "Korkeus:"
+msgstr "Korkeus"
 
 msgid "Height:"
 msgstr "Korkeus:"
 
 msgid "Helvetica"
-msgstr ""
+msgstr "Helvetica"
 
 msgid "Here you can follow the edit history of your book."
 msgstr "Tässä voit seurata kirjasi muokkaushistoriaa."
@@ -819,7 +819,7 @@ msgid "Hold chapters"
 msgstr "Luvut pidossa"
 
 msgid "I can not find description for this license."
-msgstr "Tälle käyttäjälle ei ole kuvausta. "
+msgstr "Tälle lisenssille ei ole kuvausta. "
 
 msgid "I don't know what to do!"
 msgstr "En tiedä mitä tehdä! "
@@ -837,7 +837,7 @@ msgid "IMPORT CHAPTER"
 msgstr "TUO LUKU"
 
 msgid "If in doubt, choose 'auto'"
-msgstr ""
+msgstr "Jos et ole varma, valitse \"automaattinen\""
 
 msgid "If in doubt, choose 'none'"
 msgstr "Jos sinua epäilyttää, valitse \"ei mitään\""
@@ -864,7 +864,7 @@ msgid "Images and Files"
 msgstr "Kuvat ja tiedostot"
 
 msgid "Import"
-msgstr "Tuo kirja"
+msgstr "Tuo"
 
 msgid "Import Book"
 msgstr "Tuo kirja"
@@ -882,7 +882,7 @@ msgid "Import type:"
 msgstr "Tuontityyppi:"
 
 msgid "Imported chapter"
-msgstr "Luo luku"
+msgstr "Tuotu luku"
 
 msgid "Info"
 msgstr "Tietoa"
@@ -906,7 +906,7 @@ msgid "LOADING DATA...."
 msgstr "LADATAAN TIETOA..."
 
 msgid "LTR"
-msgstr ""
+msgstr "Teksti vasemmalta oikealle"
 
 msgid "Language"
 msgstr "Kieli"
@@ -921,7 +921,7 @@ msgid "Leave this group"
 msgstr "Jätä tämä ryhmä"
 
 msgid "Let page breaks occur immediately after headings"
-msgstr ""
+msgstr "Anna sivunvaihtojen tapahtua heti otsikoiden jälkeen"
 
 msgid "Liberation Serif"
 msgstr " Liberation Serif"
@@ -1008,25 +1008,25 @@ msgid "Modifications:"
 msgstr "Muokkaukset:"
 
 msgid "Modified <span class=\"entryFilename\">entry.args.filename</span>."
-msgstr "Ladattu tiedosto <span class=\"entryFilename\">entry.args.filename</span>."
+msgstr "Muokattu <span class=\"entryFilename\">entry.args.filename</span>."
 
 msgid "Modified chapters"
-msgstr "Luvut pidossa"
+msgstr "Muokatut luvut"
 
 msgid "Modified:"
 msgstr "Muokattu:"
 
 msgid "Modify cover"
-msgstr "Kirjan muistiinpano"
+msgstr "Muokkaa kantta"
 
 msgid "Monospace"
-msgstr ""
+msgstr "Monospace"
 
 msgid "Most active books"
-msgstr "Aktiiviset kirjat"
+msgstr "Aktiivisimmat kirjat"
 
 msgid "Most active users"
-msgstr "Ei uusia käyttäjiä"
+msgstr "Aktiivisimmat käyttäjät"
 
 msgid "My Books"
 msgstr "Kirjani"
@@ -1050,7 +1050,7 @@ msgid "NEW SECTION"
 msgstr "UUSI OSA"
 
 msgid "New Books"
-msgstr "Uusia kirjoja"
+msgstr "Uudet kirjat"
 
 msgid "New Groups"
 msgstr "Uusia ryhmiä"
@@ -1095,7 +1095,7 @@ msgid "New user:"
 msgstr "Uusi käyttäjä:"
 
 msgid "New users"
-msgstr "Uusi käyttäjä:"
+msgstr "Uusia käyttäjiä"
 
 msgid "New version"
 msgstr "Uusi versio"
@@ -1107,10 +1107,10 @@ msgid "No Activity"
 msgstr "Ei toimintaa"
 
 msgid "No Cover"
-msgstr "kansikuva"
+msgstr "Ei kantta"
 
 msgid "No active books"
-msgstr "Aktiiviset kirjat"
+msgstr "Ei aktiivisia kirjoja"
 
 msgid "No active users"
 msgstr "Ei uusia käyttäjiä"
@@ -1158,7 +1158,7 @@ msgid "Oamaru Tabloid (265mm x 380mm)"
 msgstr ""
 
 msgid "Old Password"
-msgstr "Salasana"
+msgstr "Vanha salasana"
 
 msgid "Online editing:"
 msgstr "Muokkaamassa nyt:"
@@ -1176,25 +1176,25 @@ msgid "Optional snippet context URL:"
 msgstr "Valinnainen pätkän kontekstin URL:"
 
 msgid "Others"
-msgstr ""
+msgstr "Muuta"
 
 msgid "Override ALL previous settings with custom CSS"
 msgstr "Ohita KAIKKI entiset asetukset räätälöidyllä CSS-koodilla"
 
 msgid "Override Server Default CSS"
-msgstr ""
+msgstr "Ohita palvelimen oletus-CSS"
 
 msgid "Owner:"
 msgstr "Omistaja:"
 
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 msgid "PDF cover"
-msgstr "kansikuva"
+msgstr "PDF-tiedoston kansikuva"
 
 msgid "PDFs: force embedding of PDF default fonts"
-msgstr ""
+msgstr "PDF: pakota PDF-oletuskirjasinten sulauttaminen"
 
 msgid "POCKET (107mm x 174mm)"
 msgstr ""
@@ -1203,16 +1203,16 @@ msgid "Padding:"
 msgstr "Pehmustus:"
 
 msgid "Page Margins and Gutter"
-msgstr ""
+msgstr "Sivujen marginaalit ja väliin jäävä tila"
 
 msgid "Page Numbers"
-msgstr "jäsenet"
+msgstr "Sivunumerot"
 
 msgid "Page breaks"
-msgstr "Hallitse rooleja"
+msgstr "Sivunvaihdot"
 
 msgid "Pagebreak before footnotes?"
-msgstr ""
+msgstr "Sivunvaihto ennen alaviitteitä?"
 
 msgid "Password"
 msgstr "Salasana"
@@ -1221,10 +1221,10 @@ msgid "Password (6 characters at least)"
 msgstr "Salasana (vähintään 6 merkkiä)"
 
 msgid "Password (again)"
-msgstr "Salasana"
+msgstr "Salasana (uudestaan)"
 
 msgid "Password changed."
-msgstr "Salasana"
+msgstr "Salasana vaihdettu."
 
 msgid "Password is wrong! Please try again."
 msgstr "Väärä salasana! Yritä uudestaan."
@@ -1236,7 +1236,7 @@ msgid "Password reset instructions were sent to your email."
 msgstr "Salasanan nollausohjeet lähetettiin sähköpostiisi."
 
 msgid "Pending"
-msgstr "Pehmustus:"
+msgstr "Odottaa"
 
 msgid "People"
 msgstr "Ihmiset"
@@ -1297,7 +1297,7 @@ msgstr ""
 
 #. Translators: Option for Page Numbers. Right to left.
 msgid "RTL"
-msgstr ""
+msgstr "Teksti oikealta vasemmalle"
 
 msgid "Read full text of the license"
 msgstr "Lue lisenssin koko teksti"
@@ -1378,7 +1378,7 @@ msgid "Roles"
 msgstr "Roolit"
 
 msgid "Rotate"
-msgstr ""
+msgstr "Kieritä"
 
 msgid "SAVE"
 msgstr "TALLENNA"
@@ -1414,7 +1414,7 @@ msgid "Saving data. Please wait..."
 msgstr "Tallennetaan tietoa. Ole hyvä ja odota. "
 
 msgid "Saving the book notes"
-msgstr "Tallenna muistiinpanot"
+msgstr "Kirjan muistiinpanoja tallennetaan"
 
 msgid "Screen Formatted PDF Settings"
 msgstr "Ruudulle muotoillun PDF-tiedoston asetukset"
@@ -1435,7 +1435,7 @@ msgid "Select Import Type"
 msgstr "Valitse tuontityyppi."
 
 msgid "Select cover image"
-msgstr "Lataa kuva"
+msgstr "Valitse kansikuva"
 
 msgid "Select new chapter status:"
 msgstr "Valitse luvulle uusi tila:"
@@ -1483,7 +1483,7 @@ msgid "Show to others"
 msgstr "Näytä muille"
 
 msgid "Side Margin"
-msgstr "Marginaali:"
+msgstr "Sivumarginaali"
 
 msgid "Sign In / Create Account"
 msgstr "Kirjaudu sisään / luo tunnus"
@@ -1492,10 +1492,10 @@ msgid "Sign in"
 msgstr "Kirjaudu sisään"
 
 msgid "Sign out"
-msgstr "Kirjaudu sisään"
+msgstr "Kirjaudu ulos"
 
 msgid "Size"
-msgstr ""
+msgstr "Koko"
 
 msgid "Snippet:"
 msgstr "Pätkä:"
@@ -1507,7 +1507,7 @@ msgid "Source:"
 msgstr "Lähdekoodin näkymä"
 
 msgid "Spine"
-msgstr ""
+msgstr "Reunus"
 
 msgid "Split"
 msgstr "Jaa"
@@ -1555,7 +1555,7 @@ msgid "Table of Contents"
 msgstr "Sisällysluettelo"
 
 msgid "Table of Contents Header"
-msgstr "Sisällysluettelo"
+msgstr "Sisällysluettelon otsikko"
 
 msgid "Table of contents"
 msgstr "Sisällysluettelo"
@@ -1591,10 +1591,10 @@ msgid "This book is written in: "
 msgstr "Tämä kirja on kirjoitettu kielellä:"
 
 msgid "This image is currently assigned as the following cover type:"
-msgstr ""
+msgstr "Tämä kuva on tällä hetkellä asetettu seuraavana kansityyppinä:"
 
 msgid "This image is used in the following BookTypes:"
-msgstr ""
+msgstr "Tätä kuvaa käytetään seuraavissa kirjatyypeissä:"
 
 msgid "This is a first version of error message. Not much to see here."
 msgstr "Tämä on virheviestin ensimmäinen versio. Täällä ei ole nähtävää."
@@ -1615,13 +1615,13 @@ msgid "Tip: Only images of the following filetypes can be used to publish an ebo
 msgstr "Vihje: vain seuraavan tyyppisiä kuvia voidaan käyttää ekirjan julkaisuun: PNG, JPEG, GIF."
 
 msgid "Tip: The selected image file is in landscape orientation. Most book covers need portrait images."
-msgstr ""
+msgstr "Valittu kuvatiedosto on vaakasuunnassa. Useimmat kirjojen kannet ovat pystysuunnassa."
 
 msgid "Tip: The selected image file is very small. Please think of using a bigger file for better results."
-msgstr ""
+msgstr "Vinkki: valittu kuvatiedosto on hyvin pieni. Ole hyvä ja harkitse suuremman tiedoston käyttöä parempia tuloksia varten."
 
 msgid "Tip: To select multiple cover files for your book (front, spine, back) please press the Control key (Ctrl)."
-msgstr ""
+msgstr "Vihje: valitaksesi monta kansikuvaa kirjallesi (kansi, reuna, takakansi), paina Ctrl-näppäintä."
 
 msgid "Title"
 msgstr "Otsikko"
@@ -1633,13 +1633,13 @@ msgid "To reset your Booktype password, simply click the link below. That will t
 msgstr "Päivittääksesi Booktypen salasanan voit yksinkertaisesti painaa linkkiä alla.Tämä vie sinut sivulle, jossa voit luoda uuden salasanan."
 
 msgid "Top Margin"
-msgstr "Marginaali:"
+msgstr "Ylämarginaali"
 
 msgid "Total number of books:"
 msgstr "Kirjojen kokonaismäärä:"
 
 msgid "Total number of groups:"
-msgstr "Kirjojen kokonaismäärä:"
+msgstr "Ryhmien kokonaismäärä:"
 
 msgid "Total number of users:"
 msgstr "Käyttäjien kokonaismäärä:"
@@ -1648,7 +1648,7 @@ msgid "Try out our new beta renderer for Books"
 msgstr "Kokeile uutta beta-renderöijäämme kirjoille."
 
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 msgid "Type full title of the book to delete it"
 msgstr "Kirjoita kirjan koko otsikko poistaaksesi sen"
@@ -1693,7 +1693,7 @@ msgid "Unable to change password. Old password is missing."
 msgstr "Salasanaa ei voi vaihtaa. Vanha salasana puuttuu."
 
 msgid "Unable to change password. The new and confirmation passwords are not equal."
-msgstr "Salasanaa ei voi vaihtaa. Uusi ja vahvistussalasana eivät ole sanmoja."
+msgstr "Salasanaa ei voi vaihtaa. Uusi ja vahvistussalasana eivät ole samoja."
 
 msgid "Unit"
 msgstr "Yksikkö"
@@ -1714,7 +1714,7 @@ msgid "Update"
 msgstr "Päivitä"
 
 msgid "Updates"
-msgstr "Päivitä"
+msgstr "Päivitykset"
 
 msgid "Upload"
 msgstr "Lataa"
@@ -1723,10 +1723,10 @@ msgid "Upload a new image or file"
 msgstr "Lataa uusi kuva tai tiedosto"
 
 msgid "Upload cover"
-msgstr "Lataa kuva"
+msgstr "Lataa kansi"
 
 msgid "Upload cover image"
-msgstr "Lataa kuva"
+msgstr "Lataa kansikuva"
 
 msgid "Upload image"
 msgstr "Lataa kuva"
@@ -1753,31 +1753,31 @@ msgid "User settings"
 msgstr "Käyttäjän asetukset"
 
 msgid "User {0} has changed status of  chapter \"{1}\" to \"{2}\"."
-msgstr ""
+msgstr "Käyttäjä {0} on muuttanut luvun \"{1}\" tilaksi \"{2}\". "
 
 msgid "User {0} has cloned chapter \"{1}\" from book \"{2}\"."
-msgstr ""
+msgstr " Käyttäjä {0} on kopioinut luvun \"{1}\" kirjasta \"{2}\". "
 
 msgid "User {0} has created new chapter \"{1}\"."
-msgstr "Loi uuden luvun."
+msgstr " Käyttäjä {0} on luonut uuden luvun \"{1}\". "
 
 msgid "User {0} has created new section \"{1}\"."
-msgstr ""
+msgstr " Käyttäjä {0} on luonut uuden osan \"{1}\". "
 
 msgid "User {0} has deleted chapter \"{1}\"."
-msgstr "Loi uuden luvun."
+msgstr " Käyttäjä {0} on poistanut luvun \"{1}\". "
 
 msgid "User {0} has renamed chapter \"{1}\" to \"{2}\"."
-msgstr ""
+msgstr "Käyttäjä {0} on nimennyt luvun \"{1}\" uudestaan luvuksi \"{2}\". "
 
 msgid "User {0} has reverted chapter \"{1}\" to revision {2}."
-msgstr ""
+msgstr " Käyttäjä {0} on palauttanut luvun \"{1}\" revisioon {2}. "
 
 msgid "User {0} has saved chapter \"{1}\"."
-msgstr ""
+msgstr "Käyttäjä {0} on tallentanut luvun \"{1}\". "
 
 msgid "User {0} has saved notes for book \"{1}\"."
-msgstr ""
+msgstr " Käyttäjä {0} on tallentanut muistiinpanot kirjaan \"{1}\". "
 
 msgid "User:"
 msgstr "Käyttäjä:"
@@ -1804,7 +1804,7 @@ msgid "View draft"
 msgstr "Katso luonnosta"
 
 msgid "View files of status:"
-msgstr "Uusi tila:"
+msgstr "Katso tiedostot tilassa:"
 
 msgid "We are very sorry, but we are not fully compatible with your browser. We are working hard to fix this problem. Until we fix this, you can try to use this site with Firefox, Chrome, Safari, Opera or some other compatible browser. Thank you for your understanding."
 msgstr "Olemme pahoillamme, mutta selaimesi kanssa on yhteensopivuusongelma. Yritämme korjata tämän ongelman. Sillä aikaa voit käyttää tätä sivustoa Firefoxilla, Chromella, Safarilla, Operalla tai muilla yhteensopivilla selaimilla. Kiitos kärsivällisyydestäsi! "
@@ -1819,7 +1819,7 @@ msgid "Why do I need account ?"
 msgstr "Miksi tarvitset käyttäjätunnuksen?"
 
 msgid "Width"
-msgstr "Leveys:"
+msgstr "Leveys"
 
 msgid "Width:"
 msgstr "Leveys:"
@@ -1828,7 +1828,7 @@ msgid "With different versions you can easily organise your book. But be careful
 msgstr "Erilaisilla versioilla voit helposti organisoida kirjasi. Ole kuitenkin varovainen! Muut käyttäjät eivät voi muokata\n vanhoja versioita uuden luotuasi. Luo uusi <i>suuri</i> versio, jos tahdot tehdä suuria muutoksia, ja <i>pieni</i> versio, jos tahdot tehdä vain pieniä muutoksia. "
 
 msgid "Work with others in Groups. To create a Group click on the button above."
-msgstr "Työskentele muiden ryhmän jäsenien kanssa. Luodaksesi ryhmän voit napsauttaa yläpuolella olevaa nappia. "
+msgstr "Työskentele muiden ryhmän jäsenten kanssa. Luodaksesi ryhmän voit napsauttaa yläpuolella olevaa nappia. "
 
 msgid "Would you like to keep your book private or make it public? If the book is public others can find the book to help you."
 msgstr "Tahtoisitko pitää kirjasi yksityisenä vai julkaista sen? Jos kirja on julkinen, muut voivat löytää kirjan ja auttavat sinua."
@@ -1861,7 +1861,7 @@ msgid "You have no permission to edit this book."
 msgstr "Sinulla ei ole lupaa muokata tätä kirjaa."
 
 msgid "You have no permissions to do this!"
-msgstr "Sinulla ei ole lupaa tehdä tätä! "
+msgstr "Sinulla ei ole oikeuksia tämän tekemiseen!"
 
 msgid "You should refresh this page."
 msgstr "Sinun pitäisi päivittää tämä sivu. "
@@ -1903,20 +1903,20 @@ msgid "action"
 msgstr "toiminto"
 
 msgid "admins"
-msgstr ""
+msgstr "ylläpitäjät"
 
 msgid "admins and editors"
-msgstr ""
+msgstr "ylläpitäjät ja editorit"
 
 msgid "ago"
 msgstr "sitten"
 
 msgid "anyone"
-msgstr ""
+msgstr "kuka tahansa"
 
 #. Translators: Option for Page Numbers. Arabic.
 msgid "ar"
-msgstr "argumentit"
+msgstr "ar"
 
 msgid "args"
 msgstr "argumentit"
@@ -1925,7 +1925,7 @@ msgid "attachment"
 msgstr "liitetiedosto"
 
 msgid "auto"
-msgstr ""
+msgstr "automaattinen"
 
 msgid "back to chapter history"
 msgstr "takaisin luvun historiaan"
@@ -1937,7 +1937,7 @@ msgid "book"
 msgstr "kirja"
 
 msgid "book owner"
-msgstr "Kirjan muistiinpano"
+msgstr "kirjan omistaja"
 
 msgid "chapter"
 msgstr "luku"
@@ -1970,7 +1970,7 @@ msgid "created"
 msgstr "luotu"
 
 msgid "custom"
-msgstr ""
+msgstr "räätälöity"
 
 msgid "description"
 msgstr "kuvaus"
@@ -1979,7 +1979,7 @@ msgid "dimension"
 msgstr "ulottuvuus"
 
 msgid "download file"
-msgstr ""
+msgstr "lataa tiedosto"
 
 msgid "draft"
 msgstr "luonnos"
@@ -1994,20 +1994,20 @@ msgid "endpoint"
 msgstr "päätepiste"
 
 msgid "enter Archive.org ID"
-msgstr "Tuo Archive.org-kirja"
+msgstr "kirjoita Archive.org-kirjan URL"
 
 msgid "enter Booktype URL"
-msgstr "Booktype-lukija"
+msgstr "kirjoita Booktype-kirjan URL"
 
 msgid "enter Wikibooks URL"
-msgstr "Kirjoita kirjan tunnus"
+msgstr "kirjoita Wikibooks-kirjan URL"
 
 msgid "enter epub URL"
 msgstr "kirjoita epub-kirjan URL"
 
 #. Translators: Option for Page Numbers. Farsi.
 msgid "fa"
-msgstr ""
+msgstr "fa"
 
 msgid "filename"
 msgstr "tiedostonimi"
@@ -2026,7 +2026,7 @@ msgstr "ryhmä"
 
 #. Translators: Option for Page Numbers. Hindi.
 msgid "hi"
-msgstr ""
+msgstr "hi"
 
 msgid "hidden"
 msgstr "piilossa"
@@ -2035,7 +2035,7 @@ msgid "image"
 msgstr "kuva"
 
 msgid "inches"
-msgstr ""
+msgstr "tuumaa"
 
 msgid "info"
 msgstr "tieto"
@@ -2077,11 +2077,11 @@ msgid "modified"
 msgstr "muokattu"
 
 msgid "mood"
-msgstr "mielentila"
+msgstr "tila"
 
 #. Translators: Option for Page Numbers. Burmese.
 msgid "my"
-msgstr ""
+msgstr "my"
 
 msgid "name"
 msgstr "nimi"
@@ -2091,7 +2091,7 @@ msgstr "seuraava"
 
 #. Translators: Option for Page Numbers
 msgid "none"
-msgstr ""
+msgstr "ei mitään"
 
 msgid "normal"
 msgstr "normaali"
@@ -2181,10 +2181,10 @@ msgid "typeof"
 msgstr "tyyppiä"
 
 msgid "url name"
-msgstr "url-osoitteen nimi"
+msgstr "url-muodossa oleva nimi"
 
 msgid "url title"
-msgstr "url-otsikko"
+msgstr "url-muodossa oleva otsikko"
 
 msgid "user"
 msgstr "käyttäjä"
