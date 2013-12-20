@@ -109,7 +109,7 @@ else:
 
                            # messaging application
                            url(r'^messaging/', include('booki.messaging.urls')),
-
+    
                            # reader
                            url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls'))
                            )

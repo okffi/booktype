@@ -74,16 +74,11 @@
       <section class="basic-info">
           <h4>{{ user.username }}</h4>
           <p>{{ user.first_name }}</p>
-          <p>{{ user.get_profile.title }}</p>
-          <p><a href="{{ user.get_profile.homepage }}"></a>{{ user.get_profile.homepage }}</p>
+      </section>
           <figure>
                 {% profile_image  user %}
           </figure>
-          <p><a href="{{ user.get_profile.facebook }}">{{ user.get_profile.facebook }}</a></p>
-          <p><a href="{{ user.get_profile.gplus }}">{{ user.get_profile.gplus }}</a></p>
-          <p><a href="{{ user.get_profile.twitter }}">{{ user.get_profile.twitter }}</a></p>
-          <p><a href="{{ user.get_profile.github }}">{{ user.get_profile.github }}</a></p>          
-      </section>
+          <h4>{{ user.get_profile.title }}</h4>
       <section>
           <p>{% if user.username != request.user.username %}
             {% user_followbutton user.username request.user.username %}
@@ -104,6 +99,11 @@
           <p>{% trans "Following:" %} {% user_followingbox user.username %}</p>
           <p>{% trans "Followers:" %} {% user_followersbox user.username %}</p>
       </section>
+          <p><a href="{{ user.get_profile.homepage }}">{{ user.get_profile.homepage }}</a></p>
+          <p><a href="{{ user.get_profile.facebook }}">{{ user.get_profile.facebook }}</a></p>
+          <p><a href="{{ user.get_profile.gplus }}">{{ user.get_profile.gplus }}</a></p>
+          <p><a href="{{ user.get_profile.twitter }}">{{ user.get_profile.twitter }}</a></p>
+          <p><a href="{{ user.get_profile.github }}">{{ user.get_profile.github }}</a></p>          
     </div>
     <!-- END Personal info -->
 

@@ -123,7 +123,7 @@ Django View. This is main Booktype Front Page.
     showHistory = config.getConfiguration('BOOKTYPE_FRONTPAGE_HISTORY', True)
 
     if showHistory:
-        activityHistory = models.BookHistory.objects.filter(kind__in=[1, 2, 3, 4, 5, 6, 10, 11, 12, 13], book__hidden=False).order_by('-modified')[:20]
+        activityHistory = models.BookHistory.objects.filter(kind__in=[1, 2, 3, 5, 6, 10, 11, 12, 13], book__hidden=False).order_by('-modified')[:20]
     else:
         activityHistory = []
 
