@@ -73,17 +73,7 @@
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
                                 {% endif %}
-             {% if activity.kind == 4 %}
-                 {% trans "Chapter reorder" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
-                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
-                 </div>     
-                                {% endif %}
-               {% if activity.kind == 5 %}
-                    {% trans "Split chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
-                 <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
-                 </div>     
-                                {% endif %}
-                 {% if activity.kind == 6 %}
+                {% if activity.kind == 6 %}
                      {% trans "Section create" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                      <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
