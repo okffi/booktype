@@ -110,6 +110,10 @@ else:
                            # messaging application
                            url(r'^messaging/', include('booki.messaging.urls')),
 
+                           # oneall
+
+                           url(r'^oneall/', include('django_oneall.urls')),
+
                            # reader
                            url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls'))
                            )
