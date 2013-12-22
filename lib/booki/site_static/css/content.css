@@ -1,6 +1,10 @@
-body, td {color:#000; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px; margin:8px;}
+/* Google Web Font Import Test */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+@import url(http://fonts.googleapis.com/css?family=Germania+One);
 
-pre {color:#000;  font-size:14px; margin:8px;  font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;}
+body, td {color:#000; font-family:Ubuntu, Germania, Verdana, Arial, Helvetica, sans-serif; font-size:14px; margin:8px;}
+
+pre {color:#000;  font-size:14px; margin:8px;  font-family:Ubuntu, Germania, Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;}
 
 /* comment plugin */
 
