@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n booki_tags %}
+{% load i18n messaging_tags booki_tags %}
 
 {% block header %}
 <title>{% blocktrans with chapter.title as chaptertitle and book.title as booktitle %}/chapter: {{ chaptertitle }} / {{ booktitle }}{% endblocktrans %}</title>
@@ -29,6 +29,18 @@ SPAN.bookicommentmarker > IMG.markerimage {
 
 {% endblock %}
 
+{% block sidebar %}
+<div style="margin-left:5px;width:100%; border: 1px solid #c0c0c0; background-color: #FFFFFF; padding: 5px;" id="mood">
+{% if request.user.is_authenticated %}
+{% book_followbutton book.url_title request.user.username %}
+<br>
+{% book_messagefield book.url_title %}
+<br>
+{% endif %}
+{% book_timeline book.url_title %}
+</div>
+{% endblock %}
+
 
 {% block content %}
    <h2>{{ book.title }}</h2>
@@ -46,7 +58,7 @@ SPAN.bookicommentmarker > IMG.markerimage {
 </ul>
 </div>
 <div id="bookcontent">
-   {% if request.user.is_authenticated %}
+
      <div class="action-menu top">
       <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
 
@@ -54,7 +66,7 @@ SPAN.bookicommentmarker > IMG.markerimage {
 
       <a href="{% url book_info book.url_title %}">INFO</a>
      </div>
-   {% endif %}
+
 {% booki_format content %}
      <div class="action-menu bottom">
       <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
