@@ -74,7 +74,6 @@
     <div class="profile-details">
       <section class="basic-info">
           <h4>{{ user.username }}</h4>
-          <i>{{ user.get_profile.title }}</i>
           <p>{{ user.first_name }}</p>
           <figure>
                 {% profile_image  user %}
@@ -100,19 +99,12 @@
           <p>{% trans "Following:" %} {% user_followingbox user.username %}</p>
           <p>{% trans "Followers:" %} {% user_followersbox user.username %}</p>
       </section>
-      <section>
-          <p><a href="{{ user.get_profile.homepage }}">{{ user.get_profile.homepage }}</a></p>
-          <p><a href="{{ user.get_profile.facebook }}">{{ user.get_profile.facebook }}</a></p>
-          <p><a href="{{ user.get_profile.gplus }}">{{ user.get_profile.gplus }}</a></p>
-          <p><a href="{{ user.get_profile.twitter }}">{{ user.get_profile.twitter }}</a></p>
-          <p><a href="{{ user.get_profile.github }}">{{ user.get_profile.github }}</a></p> 
-      </section>
     </div>
     <!-- END Personal info -->
 
     <!-- main content area-->
     <div style="width:70%;" class="main-content">
-      <div class="alert-box info">{% blocktrans %}Do you want to learn more how to use Booktype? Read the  <a target="_new" title="Booktype user guide" href="http://en.flossmanuals.net/booktype"><i>user guide</i></a>!{% endblocktrans %} </div>
+      <div class="alert-box info">{% blocktrans %}Do you want to learn more how to use Booktype? Read the  <a target="_new" title="Booktype user guide" href="/booktype/"><i>user guide</i></a>!{% endblocktrans %} </div>
       <div class="widget-box">
         <h4> 
           {% if user.username == request.user.username %} 
@@ -224,14 +216,7 @@
     <dd>
       <input type="file" name="profile"/>
     </dd>
-        <dt><label>Title</label></dt>
-    <dd>
-      <input type="text" name="title" value="{{ user.get_profile.title }}"/>
-    </dd>
-    <dt><label>Homepage</label></dt>
-    <dd>
-      <input type="text" name="homepage" value="{{ user.get_profile.homepage }}"/>
-    </dd>
+        <dt><label>{% trans "Notification filter" %}</label></dt>
     <dd>
       <input type="text" name="notification" value="{{ notification_filter }}"/>
     </dd>
