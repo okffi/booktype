@@ -15,8 +15,14 @@
   });
  </script>
 
-<form name="changelang" method="POST" action="{{ request.META.SCRIPT_NAME }}/accounts/i18n/setlang/?language=en-us">
-  <input type="hidden" name="language" value="en-us">
+<form name="changelang" method="POST" action="{{ request.META.SCRIPT_NAME }}/accounts/i18n/setlang/?language=fi">
+  <input type="hidden" name="language" value="fi">
+
+  {% if request.LANGUAGE_CODE == "fi" %}
+    &nbsp;Suomi&nbsp;|
+  {% else %}
+    &nbsp;<a class="langfi" href="#">Suomi</a>&nbsp;|
+  {% endif %}
   
   {% if request.LANGUAGE_CODE == "en" or request.LANGUAGE_CODE == "en-us" %}
     &nbsp;English&nbsp;|
