@@ -25,9 +25,9 @@
 <div id="signin_form" style="float: left">
   
   {% if request.user.is_authenticated %}
-
+     <meta http-equiv="refresh" content="0; url={% url view_profile request.user.username %}">
    <div class="signin-confirm">
-     <h3>{% trans "You are already signed in!" %}</h3>
+     <h3>Olet jo kirjautunut sisään!</h3>
    </div>
 
   {% else %}
@@ -38,10 +38,25 @@
  <div class="register-block">
    {% include "account/form_register.html" %}
  </div>
-  {% endif %}
-  
- <div class="clearfix"></div>
 </div>
+<div class="clearfix"></div>
+</div>
+ <div>
+ <h3>Voit kirjautua myös käyttäjätiliisi liittämilläsi tunnuksilla</h3>
+ <p><a class="btn-auth btn-twitter" href="/login/twitter/">
+    Sign in with <b>Twitter</b>
+</a></p>
+<p><a class="btn-auth btn-facebook" href="/login/facebook/">
+    Sign in with <b>Facebook</b>
+</a></p>
+<p><a class="btn-auth btn-google" href="/login/google/">
+    Sign in with <b>Google</b>
+</a></p>
+<p><a class="btn-auth btn-github" href="/login/github/">
+    Sign in with <b>GitHub</b>
+</a></p>
+ </div>
+  {% endif %}
 
 {% url frontpage as frontpage_url%}
 <div id="signinmessage" style="display: none">
@@ -56,7 +71,7 @@
 </div>
 </div>
 
-<div style="padding-top: 4px; float: left; clear: both">
+<div style="padding: 20px; clear: both">
 <h3>{% trans "Why do I need account ?" %}</h3>
 <p>{% trans "Your real name is compulsory for reasons of copyright attribution on books you create and contribute to." %}</p>
 
