@@ -13,7 +13,9 @@
 <body>
 
 <div class="topbar"> 
-  {% booki_site_name %}
+      <div class="logo">
+	<a style="background: url(/site_static/images/FM-header.png) no-repeat scroll 0 0 transparent; display:block; height: 49px; margin: 0; width: 828px;" href="/"></a>
+    </div>
 
   <div class="meta-bar">
     {% if request.user.is_authenticated %}
@@ -60,7 +62,7 @@
   </div><!-- End of .navbox -->       
 </div>
 <div class="content-container">
-     <div class="sidebar">
+     <div class="sidebar shadow">
      
         {% block sidebar %}
 
@@ -70,7 +72,7 @@
 
      </div><!-- end .sidebar-->
 
-  <div class="content">
+<div style="width:70%;" class="content shadow">
     <!-- Content box and the drop shadow-->
     {% block content %}
     {% endblock %}
