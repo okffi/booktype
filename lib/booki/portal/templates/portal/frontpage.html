@@ -30,17 +30,11 @@
 <h2>{% trans "Welcome to Booktype" %}</h2>
 
 {% if request.user.is_authenticated %}
-<!-- <h3>Show message when user is signed in</h3>-->
+<h3>Tervetuloa takaisin!</h3>
 {% else %}
- <div class="signin-block">
-   {% include "account/form_signin.html" %}
- </div>
 
+<div class="clearfix"></div>
 
- <div class="register-block">
-   {% include "account/form_register.html" %}
- </div>
- <div class="clearfix"></div>
 {% endif %}
 
 {% include "portal/welcome_message.html" %}
