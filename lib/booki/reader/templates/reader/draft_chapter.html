@@ -15,6 +15,20 @@
   <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/static/css/book.{{ book.url_title }}.css" rel="Stylesheet" />
  {% endif %}
  <script type="text/javascript" src="{{ request.META.SCRIPT_NAME }}/site_static/js/draft.js"></script>
+
+<meta property="og:title" content="{{ book.title }}." />
+<meta property="og:type" content="book" />
+<meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/" />
+<meta property="og:image" content="http://books.okf.fi/{{ book.url_title }}/_info/cover.jpg" />
+<meta property="og:site_name" content="FLOSS Manuals (Suomi)" />
+<meta property="fb:admins" content="717291093" />
+<meta property="fb:app_id" content="417294881635669" />
+<meta property="og:description" content="{{ book_description|safe }}"/>
+
+{% if book.hidden %}
+<meta name="robots" content="noindex" />
+{% endif %}
+
 {% endblock %}
 
 {% block sidebar %}
@@ -59,7 +73,7 @@
       <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
       <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
       <a href="{% url book_info book.url_title %}">INFO</a>
-     </div>
+      </div>
    {% endif %}
   </div>
  </div>

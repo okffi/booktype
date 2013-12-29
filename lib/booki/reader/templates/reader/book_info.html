@@ -60,6 +60,19 @@
  });
 </script>
 
+<meta property="og:title" content="{{ book.title }}." />
+<meta property="og:type" content="book" />
+<meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/" />
+<meta property="og:image" content="http://books.okf.fi/{{ book.url_title }}/_info/cover.jpg" />
+<meta property="og:site_name" content="FLOSS Manuals (Suomi)" />
+<meta property="fb:admins" content="717291093" />
+<meta property="fb:app_id" content="417294881635669" />
+<meta property="og:description" content="{{ book_description|safe }}"/>
+
+{% if book.hidden %}
+<meta name="robots" content="noindex" />
+{% endif %}
+
 {% endblock %}
 
 {% block sidebar %}

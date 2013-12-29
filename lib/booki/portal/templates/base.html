@@ -1,6 +1,6 @@
 {% load i18n messaging_tags booki_tags %}
 <!DOCTYPE HTML>
-<html>
+<html itemscope itemtype="http://schema.org/Organization">
  <head>
    {% include "booktype_head.html" %}
 
@@ -9,6 +9,27 @@
 
    <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/static/css/_user.css" rel="Stylesheet" >
    <meta name="google-site-verification" content="guLHpb0jT6HD848QHDiEYT4-0S4PLvP_QNX7jqRr6hQ" />
+   
+   <link rel="publisher" href="https://plus.google.com/+TomiToivio/" />
+   <link rel="author" href="https://plus.google.com/+TomiToivio/" />
+
+   <meta itemprop="name" content="FLOSS Manuals (Suomi)">
+   <meta itemprop="description" content="Vapaat oppaat vapaille ohjelmille!">
+   <meta itemprop="image" content="http://books.okf.fi/testi/_draft/_v/1.0/static/floss_manuals-iphone.png">
+
+   <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27919770-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
  </head>
 <body>
 
@@ -36,11 +57,23 @@
     </ul>
     {% endif %}
     <div style="padding-top: 10px; padding-right: 15px;">
-      <br/>
+<!--      <br/>
       {% include "booktype_language.html" %}
-    </div>
-    
-    
+    </div>-->
+    <script>
+  (function() {
+    var cx = '004113797622572594359:hcfv5opewy0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox-only></gcse:searchbox-only>
+</div>    
   </div><!-- End of .meta-bar -->
 </div><!-- End top bar -->
 
@@ -60,7 +93,20 @@
       <li><a href="{% url list_people %}">{% trans "People" %}</a></li>
     </ul>      
   </div><!-- End of .navbox -->       
+<!-- AddThis Button BEGIN -->
+<div style="float:right;padding:5px;" class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
 </div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e189f706c586aed"></script>
+<!-- AddThis Button END -->
+</div>
+
 <div class="content-container">
      <div class="sidebar">
      
@@ -82,6 +128,7 @@
 
 {% include "booktype_extra.html" %}
 {% include "booktype_strings.html" %}
+
 </body>
 </html>
 

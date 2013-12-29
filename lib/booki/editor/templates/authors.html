@@ -1,18 +1,13 @@
 {% load i18n %}
-<!-- 
-  author.username
-  author.first_name
-  author.last_name
-  author.email
--->
-
+<h1>Tekijät</h1>
+<hr>
 {% for chapter in chapters %}
-{{ chapter.name }} <br>
-{{ copyright }}<br>
-<!-- &copy; Collaborative Futures Book Sprint team 2010 <br> -->
+<h3>{{ chapter.name }}</h3><br>
+{{ copyright }}
+
 {% trans "Modifications:" %} <br>
   {% for author, years in chapter.authors %}
-    {{author.username}} - {{ author.first_name }} {{ author.last_name }} 
+    {{ author.first_name }} 
     {% for year in years %} 
        {{year}}{% if not forloop.last %}, {% endif %}
     {% endfor %}
