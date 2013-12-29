@@ -62,11 +62,10 @@
 
 <meta property="og:title" content="{{ book.title }}." />
 <meta property="og:type" content="book" />
-<meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/" />
+<meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/_info/" />
 <meta property="og:image" content="http://books.okf.fi/{{ book.url_title }}/_info/cover.jpg" />
 <meta property="og:site_name" content="FLOSS Manuals (Suomi)" />
 <meta property="fb:admins" content="717291093" />
-<meta property="fb:app_id" content="417294881635669" />
 <meta property="og:description" content="{{ book_description|safe }}"/>
 
 {% if book.hidden %}
@@ -89,7 +88,7 @@
 
 {% block content %}
 <h2>{{ book.title }}</h2>
-<div class="padded">
+<div class="padded" itemscope itemtype="http://schema.org/Book">
 <div class="action-menu big">
     <a class="prime editbook" href="{% url edit_book book.url_title  %}"><nobr>{% trans "Edit this Book" %}</nobr></a>
     <a class="prime viewdraft" href="{% url draft_book book.url_title  book_version %}"><nobr>{% trans "View draft" %}</nobr></a>
@@ -100,8 +99,9 @@
     {% endif %}
 </div>
 <h3>{% trans "Book details" %}</h3>
-<div class="book-cover">{% if book.cover %}<img src="cover.jpg"/>{% endif %}</div>
-<p class="book-description">{{ book_description|safe }}</p>
+<div class="book-cover">{% if book.cover %}<img itemprop="image" src="cover.jpg"/>{% endif %}</div>
+<p class="book-description" itemprop="description">{{ book_description|safe }}</p>
+<p style="display:none;" itemprop="name">{{ book.title }}</p>
 <p style="clear:both; margin-top:0;">&nbsp;</p>
 <ul id="bookdetails">
   <li><b>{% trans "Owner:" %}</b> <a href="{% url view_profile book.owner.username %}" class="user">{{ book.owner.username }}</a></li>

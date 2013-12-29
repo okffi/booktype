@@ -60,7 +60,7 @@
 
 {% block content %}
 <h2>{% if user.username == request.user.username %}{% trans "My Dashboard" %}{% else %} {{user.username}} {% endif %}</h2>
-<div id="tabs">
+<div id="tabs" itemscope itemtype="http://schema.org/Person">
   <ul>
     <li><a href="#tabs-dashboard">{% trans "Dashboard" %}</a></li>
     <li><a href="#tabs-books">{% if user.username == request.user.username %}{% trans "My Books" %}{% else %} {% trans "Books" %} {% endif %}</a></li>
@@ -74,8 +74,8 @@
     <div class="profile-details">
       <section class="basic-info">
           <h4>{{ user.username }}</h4>
-          <p>{{ user.first_name }}</p>
-          <figure>
+          <p itemprop="name">{{ user.first_name }}</p>
+          <figure itemprop="image">
                 {% profile_image  user %}
           </figure>
       </section>
@@ -86,7 +86,7 @@
             {% endif %}</p>
           <p><a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/user/{{ user.username }}/">{% trans "Follow my changes" %}</a></p>
       </section>
-      <section class="profile-description">
+      <section class="profile-description" itemprop="description">
            <h5>{% trans "Description" %}</h5>
            {% if user_description %}
             <p class="des-text">{{ user_description|safe }}</p>
