@@ -30,5 +30,4 @@ Disallow: /site_static/
 
 # Booki editor interface.
 Disallow: /*/_edit/
-Disallow: /*/_draft/
 Disallow: /*/_upload/
