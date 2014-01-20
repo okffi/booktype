@@ -43,55 +43,55 @@
 <h3>{% trans "Recent activity" %}</h3>
 
 {% for activity in activity_history %}
-	<div class="recent-activity">
+	<div class="recent-activity" itemscope itemtype="http://schema.org/Event">
         <div class="image">
            <img src="{% url view_profilethumbnail activity.user %}?width=48" alt="{{activity.user}}">
         </div><!--end .image-->
 
-    	<div class="user">
-        	<a href="{% url view_profile activity.user.username %}">{{ activity.user }}</a> &nbsp;&nbsp; {{ activity.modified|timesince}} {% trans "ago" %}
+    	<div class="user" itemprop="name">
+        	<a itemprop="performer" href="{% url view_profile activity.user.username %}">{{ activity.user.first_name }}</a> &nbsp;&nbsp; <span itemprop="startDate" content="{{ activity.modified|date:"c" }}">{{ activity.modified|date}} {{ activity.modified|time}}</span> 
   		    <div class="chapter">  
                  {% if activity.kind == 1 %}
-                 {% trans "Created new chapter" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+                 {% trans "Created new chapter" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}         
 		{% if activity.kind == 2 %}
-             {% trans "Chapter save" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+             {% trans "Chapter save" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
                                 {% endif %}
         	 {% if activity.kind == 3 %}
-               {% trans "Chapter rename" %} <a href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
+               {% trans "Chapter rename" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
                                 {% endif %}
                 {% if activity.kind == 6 %}
-                     {% trans "Section create" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                     {% trans "Section create" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                      <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
                                 {% endif %}				
                 {% if activity.kind == 10 %}
-                {% trans "Created new book" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                {% trans "Created new book" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
 				{% endif %}
                      {% if activity.kind == 11 %}
 
-                         {% trans "Minor version" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                         {% trans "Minor version" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
 
 		   {% endif %}
 
                      {% if activity.kind == 12 %}
  
-                           {% trans "Major version" %} <a href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>
+                           {% trans "Major version" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
  
 		   {% endif %}
                          {% if activity.kind == 13 %}
  
-                   {% trans "Uploaded" %} <a href="{% url book_info activity.book.url_title  %}">"{{activity.book.title}}"</a>.
+                   {% trans "Uploaded" %} <a itemprop="url" href="{% url book_info activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
 		   {% endif %}
 			</div><!-- End of .chapter -->     

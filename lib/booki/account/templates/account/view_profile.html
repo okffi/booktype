@@ -60,7 +60,7 @@
 
 {% block content %}
 <h2>{% if user.username == request.user.username %}{% trans "My Dashboard" %}{% else %} {{user.username}} {% endif %}</h2>
-<div id="tabs">
+<div id="tabs" itemscope itemtype="http://schema.org/Person">
   <ul>
     <li><a href="#tabs-dashboard">{% trans "Dashboard" %}</a></li>
     <li><a href="#tabs-books">{% if user.username == request.user.username %}{% trans "My Books" %}{% else %} {% trans "Books" %} {% endif %}</a></li>
@@ -74,8 +74,8 @@
     <div class="profile-details">
       <section class="basic-info">
           <h4>{{ user.username }}</h4>
-          <p>{{ user.first_name }}</p>
-          <figure>
+          <p itemprop="name">{{ user.first_name }}</p>
+          <figure itemprop="image">
                 {% profile_image  user %}
           </figure>
       </section>
@@ -86,7 +86,7 @@
             {% endif %}</p>
           <p><a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/user/{{ user.username }}/">{% trans "Follow my changes" %}</a></p>
       </section>
-      <section class="profile-description">
+      <section class="profile-description" itemprop="description">
            <h5>{% trans "Description" %}</h5>
            {% if user_description %}
             <p class="des-text">{{ user_description|safe }}</p>
@@ -259,6 +259,7 @@
    <div>
    <div>
     <h3>Liitä tunnukset käyttäjätiliisi</h3>
+    <p>Voit liittää ulkoisia palveluita käyttäjätiliisi kirjautumista varten.</p>
  	<p><a class="btn-auth btn-twitter" href="/login/twitter/">
     Liitä <b>Twitter</b>
 	</a></p>
@@ -272,19 +273,6 @@
     Liitä <b>GitHub</b>
 	</a></p>
 
- 	<h3>Poista tunnukset käyttäjätilistäsi</h3>
- 	<p><a class="btn-auth btn-twitter" href="/disconnect/twitter/">
-    Poista <b>Twitter</b>
-	</a></p>
-	<p><a class="btn-auth btn-facebook" href="/disconnect/facebook/">
-    Poista <b>Facebook</b>
-	</a></p>
-	<p><a class="btn-auth btn-google" href="/disconnect/google/">
-    Poista <b>Google</b>
-	</a></p>
-	<p><a class="btn-auth btn-github" href="/disconnect/github/">
-    Poista <b>GitHub</b>
-	</a></p>
 	</div>
   </div>
   {% endif %}

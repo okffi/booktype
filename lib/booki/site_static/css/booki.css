@@ -21,7 +21,6 @@ a {text-decoration: none;}
 a:link {color:#4b2582;text-decoration: underline;}
 a:visited {color: #926dc7;text-decoration: underline;}
 a:hover {text-decoration: none;}
-
 img {
        border-style:none;
        max-width:540px;        
@@ -284,23 +283,23 @@ body > .content-container {
 }
 
 .content {
-	width:70%;
 	background: #ffffff;
 	border: 1px solid #9d9d9d;
 	padding: 14px 0;
+	min-width:706px;
 	margin: 10px 0 10px 0;
 	}
 body > .content-container.with-sidebar .content {
 	margin: 10px 31% 10px 0;
 }
 .sidebar	{
-	width:25%;
+	width:30%;
 	float:right;
-	margin-left: 0px;
-	padding-left: 0px;
+	padding: 0;
+	margin: 0;
 }
 .shadow {
-   -moz-box-shadow: 0px 1px 2px #aaa; /* FF3.5+ */
+    -moz-box-shadow: 0px 1px 2px #aaa; /* FF3.5+ */
   	-webkit-box-shadow: 0px 1px 2px #aaa; /* Saf3.0+, Chrome */
     box-shadow: 0px 1px 2px #aaa; /* Opera 10.5, IE 9.0 */
 	/* For IE 8 */
@@ -1222,6 +1221,7 @@ div.list.list-container {
 #mood { 
 	border: 1px solid #c0c0c0; 
 	background-color: #ede9f2; 
+	padding: 12px 8px;
 	}
 	#mood input[type="file"] { 
 		margin:0 0 5px;
@@ -2338,8 +2338,20 @@ label.error {
   }
 }
 
+*/
+    *display: inline; /* 3 */
+    *zoom: 1; /* 3 */
+}
+
+/* Oauth icons */
+
 /* Social Signin Buttons from http://necolas.github.io/css3-social-signin-buttons/ */
 
+.btn-auth a {
+    border: 1px solid #999 !important;
+
+
+}
 
 .btn-auth,
 .btn-auth:visited {
@@ -2347,7 +2359,7 @@ label.error {
     display: inline-block;
     height: 22px;
     padding: 0 1em;
-    border: 1px solid #999;
+    border: 1px solid #999 !important;
     border-radius: 2px;
     margin: 0;
     text-align: center;
@@ -2385,7 +2397,7 @@ label.error {
     float: left;
     width: 22px;
     height: 22px;
-    background: url(/site_static/images/auth-icons.png) no-repeat 99px 99px;
+    background: url(http://books.okf.fi/site_static/images/auth-icons.png) no-repeat 99px 99px;
 }
 
 /**
@@ -2718,30 +2730,3 @@ label.error {
     background-position: -216px -22px;
 }
 
-/* Google Web Font Import Test */
-@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro);
-
-h1, h2, h3, h4, h5 {
-color: #FF7F00;
-font-family: 'Ubuntu', sans-serif;
-}
-
-body, td {
-color:#000;
-font-family: 'Ubuntu', sans-serif;
-font-size:14px;
-margin:8px;
-}
-
-.pre {
-padding:10px;
-background-color:#000000;
-color:#00CC00;
-margin:8px;
-font-family: 'Source Code Pro', sans-serif;
--webkit-box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
--moz-box-shadow:    1px 1px 20px rgba(0, 0, 0, 0.5);
-box-shadow:         1px 1px 20px rgba(0, 0, 0, 0.5);
-text-shadow: 1px 1px 3px rgba(0, 255, 0, 1);
-}
