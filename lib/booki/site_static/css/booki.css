@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic);
 @import url(http://fonts.googleapis.com/css?family=Germania+One);
-@import url(http://fonts.googleapis.com/css?family=VT323);
 
 iframe.hidden_frame {
     border: 0px;
@@ -2752,7 +2751,7 @@ pre {
     font-size:18px;
     color:#00FF00;
     background-color:#000000;
-    font-family: 'VT323', cursive;
+    font-family: Ubuntu, sans-serif;
     padding:30px;
     margin:10px;
     border-radius: 31px 31px 31px 31px;
@@ -2763,4 +2762,29 @@ pre {
     -webkit-box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
+    overflow:auto;
+}
+
+/* Blockquote sitaateille */
+
+blockquote {
+    font-size:18px;
+    color:#000000;
+    background-color:#ffffff;
+    font-family: Ubuntu, sans-serif;
+    padding:30px;
+    margin:10px;
+    border-radius: 31px 31px 31px 31px;
+    -moz-border-radius: 31px 31px 31px 31px;
+    -webkit-border-radius: 31px 31px 31px 31px;
+    border: 1px solid #ccc;
+    box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
+    overflow:auto;
+}
+
+blockquote strong {
+    font-size:18px;
+    color:#000000;
+    font-family: Ubuntu, sans-serif;
+    float:right;
 }
