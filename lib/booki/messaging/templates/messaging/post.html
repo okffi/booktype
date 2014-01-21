@@ -1,19 +1,19 @@
 {% load i18n profile %}
 
-<div class="post-container post{{post.id}}">
+<div class="post-container post{{post.id}}" itemscope itemtype="http://schema.org/UserComments">
 <div class="thumb">
 <a href="{% url view_profile post.sender.as_user.username %}"><img src="{% url view_profilethumbnail post.sender.as_user %}?width=48"></a>
 </div>
-<a href="{% url view_profile post.sender.as_user.username %}" class="sender">{{ post.sender }}</a>
+<a itemprop="creator" href="{% url view_profile post.sender.as_user.username %}" class="sender">{{ post.sender }}</a>
 {% if request.user.is_authenticated %}
 <a class="action-button" href="{% url view_profile post.sender.as_user.username %}" onclick="$.bookiReply($('.post{{post.id}}')[0]);return false">{% trans "send a reply" %}</a>
 {% endif %}
 
 <br />
-<div class="post-time">
+<div itemprop="startDate" content="{{ post.timestamp|date:"c" }}" class="post-time">
 {{ post.timestamp|timesince }} {% trans "ago" %}
 </div>
-{{ post.content_as_html|safe }}
+<span itemprop="name">{{ post.content_as_html|safe }}</span>
 {% if post.attachment %}
 <br />
 <a href="{{ DATA_URL }}/{{ post.attachment }}"><img width="100" src="{{ DATA_URL }}/{{ post.attachment }}" /></a>

@@ -2,7 +2,7 @@
 {% load i18n messaging_tags booki_tags %}
 
 {% block header %}
-<title>{% blocktrans with book.title as booktitle %}/book: {{ booktitle }}{% endblocktrans %}</title>
+<title>{% blocktrans with book.title as booktitle %}{{ booktitle }}{% endblocktrans %}</title>
 <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/site_static/css/editor.css" rel="Stylesheet" />
 <link rel="alternate" type="application/rss+xml" title="RSS feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}/" /> 
 <link rel="alternate" type="application/atom+xml" title="Atom feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}/" /> 
@@ -60,16 +60,16 @@
  });
 </script>
 
-<meta property="og:title" content="{{ book.title }}." />
+<meta property="og:title" content="{{ book.title }}" />
 <meta property="og:type" content="book" />
 <meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/_info/" />
 <meta property="og:image" content="http://books.okf.fi/{{ book.url_title }}/_info/cover.jpg" />
-<meta property="og:site_name" content="FLOSS Manuals (Suomi)" />
 <meta property="fb:admins" content="717291093" />
+<meta property="fb:app_id" content="417294881635669" />
 <meta property="og:description" content="{{ book_description|safe }}"/>
 
 {% if book.hidden %}
-<meta name="robots" content="noindex" />
+<meta name="robots" content="noindex, nofollow" />
 {% endif %}
 
 {% endblock %}
@@ -90,21 +90,22 @@
 <h2>{{ book.title }}</h2>
 <div class="padded" itemscope itemtype="http://schema.org/Book">
 <div class="action-menu big">
+    <a itemprop="url" class="prime viewdraft" href="/{{ book.url_title }}/"><nobr>Lue kirjaa</nobr></a>
+    <a itemprop="url" class="prime viewdraft" href="/{{ book.url_title }}/_full/"><nobr>Koko kirja</nobr></a>
     <a class="prime editbook" href="{% url edit_book book.url_title  %}"><nobr>{% trans "Edit this Book" %}</nobr></a>
-    <a class="prime viewdraft" href="{% url draft_book book.url_title  book_version %}"><nobr>{% trans "View draft" %}</nobr></a>
     {% if is_book_admin %}
         <a class="prime viewdraft editinfo" href="#"><nobr>{% trans "Edit book info" %}</nobr></a>
         <a class="prime viewdraft deletebook" href="#"><nobr>{% trans "Delete book" %}</nobr></a>
 
     {% endif %}
 </div>
-<h3>{% trans "Book details" %}</h3>
+<h3>Kirjan tiedot</h3>
 <div class="book-cover">{% if book.cover %}<img itemprop="image" src="cover.jpg"/>{% endif %}</div>
 <p class="book-description" itemprop="description">{{ book_description|safe }}</p>
 <p style="display:none;" itemprop="name">{{ book.title }}</p>
 <p style="clear:both; margin-top:0;">&nbsp;</p>
 <ul id="bookdetails">
-  <li><b>{% trans "Owner:" %}</b> <a href="{% url view_profile book.owner.username %}" class="user">{{ book.owner.username }}</a></li>
+  <li><b>{% trans "Owner:" %}</b> <a itemprop="author" href="{% url view_profile book.owner.username %}" class="user">{{ book.owner.username }}</a></li>
   <li><b>{% trans "Status:" %}</b> {{ book.status.name }}
 
 {% if book.hidden %}
@@ -114,18 +115,18 @@
 {% endif %}
   </li>
 {% if book.group %}
-  <li><b>{% trans "Member of group:" %}</b> <a href="{% url view_group book.group.url_name %}">{{ book.group.name }}</a></li>
+  <li><b>{% trans "Member of group:" %}</b> <a itemprop="publisher" href="{% url view_group book.group.url_name %}">{{ book.group.name }}</a></li>
 {% endif %}
-  <li><b>{% trans "Current version:" %}</b> <a href="{% url draft_book book.url_title book_version %}">{{ book.version.getVersion }}</a></li>
+  <li><b>{% trans "Current version:" %}</b> <a itemprop="version" href="{% url draft_book book.url_title book_version %}">{{ book.version.getVersion }}</a></li>
 
   <li>&nbsp;</li>
-  <li><b>{% trans "Created:" %}</b> {{ book.created }}</li>
-  <li><b>{% trans "Published:" %}</b> {{ book.published }}</li>
+  <li><b>{% trans "Created:" %}</b> <i itemprop="dateCreated">{{ book.created }}</i></li>
+  <li><b>{% trans "Published:" %}</b> <i itemprop="datePublished">{{ book.published }}</i></li>
   <li>&nbsp;</li>
 <li>
 <b>{% trans "Collaborators:" %}</b>
 {% for username in book_collaborators %}
-  <a href="{% url view_profile username %}" class="user">{{ username }}</a>
+  <a itemprop="author" href="{% url view_profile username %}" class="user">{{ username }}</a>
   {% if not forloop.last %},{% endif %}
 {% endfor %}
 </li>
@@ -150,74 +151,74 @@
 <h3 class="inner">{% trans "Recent activity" %}</h3>
 <table class="basic-table" border="0" width="100%">
  {% for ln in book_history %}
-   <tr>
+   <tr itemscope itemtype="http://schema.org/UpdateAction">
        {% if ln.kind == 1 %}
-       <td valign="top"> 
+       <td valign="top" itemprop="name"> 
          {% trans "Chapter create" %}
        </td>
        {% else %}
          {% if ln.kind == 2 %}
-           <td valign="top"> 
+           <td valign="top" itemprop="name"> 
              {% trans "Chapter save" %}
            </td>
          {% else %}
            {% if ln.kind == 3 %}
-             <td valign="top"> 
+             <td valign="top" itemprop="name"> 
                {% trans "Chapter rename" %}
              </td>
            {% else %}
              {% if ln.kind == 4 %}
-               <td valign="top" colspan="2"> 
+               <td valign="top" colspan="2" itemprop="name"> 
                  {% trans "Chapter reorder" %}
                </td>
              {% else %}
                {% if ln.kind == 5 %}
-                  <td valign="top" colspan="2"> 
+                  <td valign="top" colspan="2" itemprop="name"> 
                     {% trans "Split chapter" %}
                   </td>
                {% else %}
                  {% if ln.kind == 6 %}
-                   <td valign="top" colspan="2"> 
+                   <td valign="top" colspan="2" itemprop="name"> 
                      {% trans "Section create" %}
                    </td>
                  {% else %}
                    {% if ln.kind == 10 %}
-                     <td valign="top" colspan="2"> 
+                     <td valign="top" colspan="2" itemprop="name"> 
                        {% trans "Book create" %}
                      </td>
                    {% else %}
                      {% if ln.kind == 11 %}
-                       <td valign="top" colspan="2"> 
+                       <td valign="top" colspan="2" itemprop="name"> 
                          {% trans "Minor version" %}
                        </td>
                      {% else %}
                        {% if ln.kind == 12 %}
-                         <td valign="top" colspan="2"> 
+                         <td valign="top" colspan="2" itemprop="name"> 
                            {% trans "Major version" %}
                          </td>
                        {% else %}
                          {% if ln.kind == 13 %}
-                           <td valign="top" colspan="2"> 
-                             {% trans "Uploaded" %} "<a class="attachment" href="{% url draft_attachment book.url_title book_version ln.args|jsonlookup:"filename" %}">{{ ln.args|jsonlookup:"filename" }}</a>"
+                           <td valign="top" colspan="2" itemprop="name"> 
+                             {% trans "Uploaded" %} "<a itemprop="image" class="attachment" href="{% url draft_attachment book.url_title book_version ln.args|jsonlookup:"filename" %}">{{ ln.args|jsonlookup:"filename" }}</a>"
                            </td>
                          {% else %}
                            {% if ln.kind == 19 %}
-                             <td valign="top" colspan="2"> 
+                             <td valign="top" colspan="2" itemprop="name"> 
                                {% trans "Delete chapter" %}
                               </td>        
                            {% else %}
                              {% if ln.kind == 16 %}
-                               <td valign="top" colspan="2"> 
+                               <td valign="top" colspan="2" itemprop="name"> 
                                  {% trans "Upload cover" %}
                                 </td>        
                              {% else %}
                                {% if ln.kind == 17 %}
-                                 <td valign="top" colspan="2"> 
+                                 <td valign="top" colspan="2" itemprop="name"> 
                                    {% trans "Delete cover" %}
                                   </td>        
                                {% else %}
                                  {% if ln.kind == 14 %}
-                                   <td valign="top" colspan="2"> 
+                                   <td valign="top" colspan="2" itemprop="name"> 
                                      {% trans "Attachment delete" %}
                                     </td>        
                                  {% else %}
@@ -239,12 +240,12 @@
 
        {% if ln.chapter %}
          <td valign="top"> 
-           <a href="{% url draft_chapter book.url_title  book_version  ln.chapter.url_title %}">{{ln.chapter.title}}</a>
+           <a itemprop="url" href="{% url draft_chapter book.url_title  book_version  ln.chapter.url_title %}">{{ln.chapter.title}}</a>
          </td>
        {% endif %}
 
-     <td valign="top"> <a href="{% url view_profile ln.user.username %}" class="user">{{ ln.user.username }}</a> </td>
-     <td valign="top"> {{ ln.modified }} </td>
+     <td valign="top"> <a itemprop="agent" href="{% url view_profile ln.user.username %}" class="user">{{ ln.user.username }}</a> </td>
+     <td itemprop="endtime" valign="top"> {{ ln.modified }} </td>
    </tr>
  {% endfor %}
 </table>

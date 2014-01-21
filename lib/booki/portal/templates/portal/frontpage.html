@@ -43,13 +43,13 @@
 <h3>{% trans "Recent activity" %}</h3>
 
 {% for activity in activity_history %}
-	<div class="recent-activity" itemscope itemtype="http://schema.org/Event">
+	<div class="recent-activity" itemscope itemtype="http://schema.org/UpdateAction">
         <div class="image">
            <img src="{% url view_profilethumbnail activity.user %}?width=48" alt="{{activity.user}}">
         </div><!--end .image-->
 
     	<div class="user" itemprop="name">
-        	<a itemprop="performer" href="{% url view_profile activity.user.username %}">{{ activity.user.first_name }}</a> &nbsp;&nbsp; <span itemprop="startDate" content="{{ activity.modified|date:"c" }}">{{ activity.modified|date}} {{ activity.modified|time}}</span> 
+        	<a itemprop="agent" href="{% url view_profile activity.user.username %}">{{ activity.user.first_name }}</a> &nbsp;&nbsp; <span itemprop="endTime" content="{{ activity.modified|date:"c" }}">{{ activity.modified|date}} {{ activity.modified|time}}</span> 
   		    <div class="chapter">  
                  {% if activity.kind == 1 %}
                  {% trans "Created new chapter" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.

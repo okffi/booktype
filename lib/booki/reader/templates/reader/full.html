@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load i18n booki_tags %}
+{% load i18n booki_tags messaging_tags %}
 
 {% block header %}
 <title>{% blocktrans with book.title as booktitle %}/_full: {{ booktitle }}{% endblocktrans %}</title>
@@ -8,6 +8,31 @@
 {% if has_css %}
 <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/static/css/book.{{ book.url_title }}.css" rel="Stylesheet" />
 {% endif %}
+<meta property="og:title" content="{{ book.title }}" />
+<meta property="og:type" content="book" />
+<meta property="og:url" content="http://books.okf.fi/{{ book.url_title }}/_info/" />
+<meta property="og:image" content="http://books.okf.fi/{{ book.url_title }}/_info/cover.jpg" />
+<meta property="fb:admins" content="717291093" />
+<meta property="fb:app_id" content="417294881635669" />
+<meta property="og:description" content="{{ book_description|safe }}"/>
+
+{% if book.hidden %}
+<meta name="robots" content="noindex, nofollow" />
+{% endif %}
+
+
+{% endblock %}
+
+{% block sidebar %}
+<div style="margin-left:5px;width:100%; border: 1px solid #c0c0c0; background-color: #FFFFFF; padding: 5px;" id="mood">
+{% if request.user.is_authenticated %}
+{% book_followbutton book.url_title request.user.username %}
+<br>
+{% book_messagefield book.url_title %}
+<br>
+{% endif %}
+{% book_timeline book.url_title %}
+</div>
 {% endblock %}
 
 
@@ -15,6 +40,13 @@
 
 <h2>{{ book.title }}</h2>
 <div id="full-view-content">
+     <div class="action-menu top">
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+
+      <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
+
+      <a href="{% url book_info book.url_title %}">INFO</a>
+     </div>
 {% for chap in chapters %}
  {% ifequal chap.type "chapter"%}
    {% booki_format chap.chapter  %}
@@ -22,5 +54,12 @@
    <h3> {{ chap.title }}</h3>
  {% endifequal %}
 {% endfor %}
+     <div class="action-menu top">
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+
+      <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
+
+      <a href="{% url book_info book.url_title %}">INFO</a>
+     </div>
 </div>
 {% endblock %}

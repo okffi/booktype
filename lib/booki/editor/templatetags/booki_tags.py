@@ -180,7 +180,7 @@ def booki_site_metadata():
 
     tagline = config.getConfiguration('BOOKTYPE_SITE_TAGLINE', None)
     if tagline:
-        s += '<meta name="description" content="%s"/>' % cgi.escape(tagline, True)
+        s += '<meta itemprop="description" content="%s"/>' % cgi.escape(tagline, True)
 
     return s
 
