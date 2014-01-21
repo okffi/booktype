@@ -1,6 +1,6 @@
 {% load i18n profile %}
 
-<div class="post-container post{{post.id}}" itemscope itemtype="http://schema.org/UserComments">
+<div class="post-container post{{post.id}}" itemprop="comment" itemscope itemtype="http://schema.org/UserComments">
 <div class="thumb">
 <a href="{% url view_profile post.sender.as_user.username %}"><img src="{% url view_profilethumbnail post.sender.as_user %}?width=48"></a>
 </div>

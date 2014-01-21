@@ -3,10 +3,9 @@
 {% load i18n messaging_tags booki_tags %}
 
 {% block header %}
-<title>{{ book.title }}: {{ chapter.title }}</title>
+<title itemprop="name">{{ book.title }}: {{ chapter.title }}</title>
 <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/site_static/css/published.css" rel="Stylesheet" />
 
-<link rel="alternate" type="application/rss+xml" title="RSS feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}/" /> 
 <link rel="alternate" type="application/atom+xml" title="Atom feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}/" /> 
 
 {% if has_css %}
@@ -72,7 +71,7 @@ SPAN.bookicommentmarker > IMG.markerimage {
 <div id="bookcontent">
 
      <div class="action-menu top">
-      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}">SEURAA</a>
 
       <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
 
@@ -82,7 +81,7 @@ SPAN.bookicommentmarker > IMG.markerimage {
 {% booki_format content %}
 
      <div class="action-menu bottom">
-      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}">SEURAA</a>
 
       <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
 

@@ -2,7 +2,7 @@
 {% load messaging_tags i18n %}
 
 {% block header %}
- <title>{% trans "Booktype Books" %}</title>
+ <title>Kirjat</title>
 {% endblock %}
 
 {% block sidebar %}
@@ -22,19 +22,19 @@
 	<!-- BOOKS LISTING -->
 	<div id="intro">
         {% if page == 1 %}
-    <h2>{% trans "Books" %}</h2>
+    <h2>Kirjat</h2>
 	
-    <h3>{% trans "Active books" %}</h3>
+    <h3>Aktiiviset kirjat</h3>
        
 	{% for book in latest_active %}
- 				<div class="book">
+ 				<div class="book" itemscope itemtype="http://schema.org/Book">
             		<div class="block">
              			<div class="title">
-			                <a href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
+			                <a itemprop="name" href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
 						</div>
                     </div>    
  	          		<div class="link">
-			            <a href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
+			            <a itemprop="url" href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
                     </div>
 				</div><!-- end .book -->
 
@@ -45,15 +45,15 @@
 	<h3>{% trans "Latest Books" %}</h3>
 
 	{% for book in latest_books %}
- 				<div class="book">
+ 				<div class="book" itemscope itemtype="http://schema.org/Book">
             		<div class="block">
              			<div class="title">
-                        	<a href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
+                        	<a itemprop="name" href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
 			            </div>
                     </div>
 	               <div class="link">
-		           		 <a href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
-                    	 <div class="timesince">
+		           		 <a itemprop="url" href="{% url book_info  book.url_title %}" title="{{book.title}}">{{ book.title }}</a>
+                    	 <div class="timesince" itemprop="dateCreated" content="{{ book.created|date:"c" }}">
                          	{{ book.created|timesince }} {% trans "ago" %}
                          </div>
             		</div>
@@ -67,7 +67,7 @@
 
 	<ul class="list">
 	{% for book in books.object_list %}
-	   <li><a href="{% url book_info  book.url_title %}">{{ book.title }}</a></li>
+	   <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="{% url book_info  book.url_title %}">{{ book.title }}</a></li>
 	{% endfor %}
 	</ul>
 

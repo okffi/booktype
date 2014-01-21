@@ -2,7 +2,7 @@
 {% load messaging_tags i18n profile %}
 
 {% block header %}
- <title>{% trans "Booktype People" %}</title>
+ <title>Käyttäjät</title>
 {% endblock %}
 
 {% block sidebar %}
@@ -22,19 +22,19 @@
 	<!-- PEOPLE LISTING -->
 	<div id="intro">
         {% if page == 1 %}
-    <h2>{% trans "People" %}</h2>
-	<h3>{% trans "Active people" %}</h3>
+    <h2>Käyttäjät</h2>
+	<h3>Aktiiviset käyttäjät</h3>
     
 	{% for p in latest_active %}
-    <div class="people shadow">
+    <div class="people shadow" itemscope itemtype="http://schema.org/Person">
   		<div class="image">
             <a href="{% url view_profile  p.username %}" title="{{p.username}}">{% profile_image p %}</a>
 		</div>
         <div class="user">                 
               <a href="{% url view_profile  p.username %}" title="{{p.username}}">            
-              	<b>{{ p.first_name }}</b>
+              	<b itemprop="name">{{ p.first_name }}</b>
               </a><br />
-             <a href="{% url view_profile  p.username %}" title="{{p.username}}"><i>{{ p.username }}</i></a>
+             <a itemprop="url" href="{% url view_profile  p.username %}" title="{{p.username}}"><i>{{ p.username }}</i></a>
 		</div>
 	</div>              
     {% endfor %}
@@ -42,18 +42,18 @@
         
      <div class="clearfix"></div>
 
-	<h3>{% trans "New people" %}</h3>
+	<h3>Uudet käyttäjät</h3>
 	
     {% for p in latest_people %}
-    <div class="people shadow">
+    <div itemscope itemtype="http://schema.org/Person" class="people shadow">
     	<div class="image">
       		<a href="{% url view_profile  p.username %}" title="{{p.username}}">{% profile_image p %}</a>
 		</div>
         <div class="user">    
 	        <a href="{% url view_profile  p.username %}" title="{{p.username}}">
-          	<b>{{ p.first_name }}</b>
+          	<b itemprop="name">{{ p.first_name }}</b>
           </a><br/>
-          <a href="{% url view_profile  p.username %}" title="{{p.username}}"><i>{{ p.username }}</i></a>
+          <a itemprop="url" href="{% url view_profile  p.username %}" title="{{p.username}}"><i>{{ p.username }}</i></a>
 		</div>
      </div>
 
@@ -64,10 +64,10 @@
         {% endif %}
 
 
-	<h3>{% trans "All" %}</h3>
+	<h3>Kaikki käyttäjät</h3>
 	<ul class="list">
 	{% for p in people.object_list %}
-	   <li><a href="{% url view_profile p.username %}"><b>{{ p.username }}</b> - <i> {{p.first_name}}</i></a></li>
+	   <li itemscope itemtype="http://schema.org/Person"><a itemprop="url" href="{% url view_profile p.username %}"><b>{{ p.username }}</b> - <i itemprop="name"> {{p.first_name}}</i></a></li>
 	{% endfor %}
 	</ul>
 

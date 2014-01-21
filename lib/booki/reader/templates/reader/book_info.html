@@ -4,7 +4,6 @@
 {% block header %}
 <title>{% blocktrans with book.title as booktitle %}{{ booktitle }}{% endblocktrans %}</title>
 <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/site_static/css/editor.css" rel="Stylesheet" />
-<link rel="alternate" type="application/rss+xml" title="RSS feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}/" /> 
 <link rel="alternate" type="application/atom+xml" title="Atom feed for {{ book.title }}" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}/" /> 
 {% if has_css %}
 <link type="text/css" href="{{ request.META.SCRIPT_NAME }}/static/css/book.{{ book.url_title }}.css" rel="Stylesheet" />
@@ -250,7 +249,7 @@
  {% endfor %}
 </table>
 <div style="padding: 10px 0 20px 0;">
-  <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">{% trans "Follow changes" %}</a>
+  <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}">{% trans "Follow changes" %}</a>
 </div>
 
 </div>

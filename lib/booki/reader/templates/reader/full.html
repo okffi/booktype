@@ -41,7 +41,7 @@
 <h2>{{ book.title }}</h2>
 <div id="full-view-content">
      <div class="action-menu top">
-      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}">SEURAA</a>
 
       <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
 
@@ -55,7 +55,7 @@
  {% endifequal %}
 {% endfor %}
      <div class="action-menu top">
-      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/book/{{ book.url_title }}">SEURAA</a>
+      <a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/book/{{ book.url_title }}">SEURAA</a>
 
       <a href="{% url edit_book book.url_title %}">MUOKKAA</a>
 
