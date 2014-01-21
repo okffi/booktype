@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-
+<div style="padding:10px;">
 <h1>#{{ tagname }}</h1>
 
 {% tag_followbutton tagname request.user.username %}
@@ -18,5 +18,5 @@
 </div>
 {% endif %}
 {% tag_timeline tagname %}
-
+</div>
 {% endblock %}
