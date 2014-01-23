@@ -2913,24 +2913,59 @@ div.proseduuri {
 
 /* Siistimmät tablet */
 
-table {
+#tinymce table, #bookcontent table {
      border: 1px solid rgb(192, 192, 192);
      box-shadow: 0px 1px 2px rgb(170, 170, 170);
+     margin:10px !important;
+     width:100%;
 }
 
-tr {
-
+#tinymce table caption, #bookcontent table caption {
+     border: 1px solid rgb(192, 192, 192);
+     padding:10px;
 }
+
+#tinymce td, #bookcontent td {
+     border: 1px solid rgb(192, 192, 192);
+     padding:10px;
+}
+
+#tinymce tr:nth-child(even), #bookcontent tr:nth-child(even) {
+        background-color: rgb(237, 233, 242) !important;
+}
+#tinymce tr:nth-child(odd), #bookcontent tr:nth-child(odd) {
+    background-color: #ffffff !important;
+}
+
+/* Proseduurit */
+
+#tinymce li, #bookcontent li {
+     border: 1px solid rgb(192, 192, 192);
+     padding:10px;
+}
+
+#tinymce li img, #bookcontent li img {
+     padding-top:10px;
+}
+
+#tinymce li:nth-child(even), #bookcontent li:nth-child(even) {
+        background-color: rgb(237, 233, 242) !important;
+}
+#tinymce li:nth-child(odd), #bookcontent li:nth-child(odd) {
+    background-color: #ffffff !important;
+}
+
+
+/* Käyttöliittymäelementti */
+/* Pitäisikö sen olla span vai strong? */
 
 span.elementti {
 	border: 1px solid rgb(192, 192, 192);
     	background-color: rgb(237, 233, 242);
 }
 
-/*
-em {
-color: rgb(8, 84, 199);
-text-shadow: 0px 0px 1px rgb(32, 220, 244);
-font-weight: 400;
+strong {
+        border: 1px solid rgb(192, 192, 192);
+        background-color: rgb(237, 233, 242);
 }
-*/
+
