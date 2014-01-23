@@ -132,13 +132,13 @@ class UserFeedRSS(Feed):
         return get_object_or_404(User, username=userid)
 
     def title(self, obj):
-        return obj.username or obj.first_name
+        return obj.first_name
 
     def link(self, obj):
-        return obj.get_absolute_url()
+        return 'http://books.okf.fi/accounts/%s/' % obj.username
 
     def description(self, obj):
-        return obj.username or obj.first_name
+        return 'http://books.okf.fi/accounts/%s/' % obj.username
 
     def items(self, obj):
         return models.ChapterHistory.objects.raw('SELECT editor_chapterhistory.* FROM editor_chapterhistory LEFT OUTER JOIN editor_chapter ON (editor_chapter.id=editor_chapterhistory.chapter_id) LEFT OUTER JOIN editor_book ON (editor_book.id=editor_chapter.book_id) WHERE editor_chapterhistory.user_id=%s AND editor_book.hidden=FALSE ORDER BY editor_chapterhistory.modified DESC LIMIT 5', (obj.id, ))
