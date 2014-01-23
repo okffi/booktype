@@ -27,20 +27,140 @@
 
 {% block content %}
 <div id="intro">
-<h2>{% trans "Welcome to Booktype" %}</h2>
+<h1>{% trans "Welcome to Booktype" %}</h1>
 
-{% if request.user.is_authenticated %}
-<h3>Tervetuloa takaisin!</h3>
-{% else %}
+ <div class="clearfix"></div>
 
-<div class="clearfix"></div>
-
-{% endif %}
 
 {% include "portal/welcome_message.html" %}
 
+<div class="clearfix"></div>
+
+{% if request.user.is_authenticated %}
+<br/>
+<h3>Tervetuloa takaisin!</h3>
+{% else %}
+<br/>
+<h2>Rekisteröidy ja kirjaudu sisään!</h2>
+
+ <div class="signin-block">
+   {% include "account/form_signin.html" %}
+ </div>
+
+
+ <div class="register-block">
+   {% include "account/form_register.html" %}
+ </div>
+
+
+<div class="clearfix"></div>
+
+ <div>
+ <h3>Voit kirjautua myös käyttäjätiliisi liittämilläsi tunnuksilla</h3>
+ <p><a class="btn-auth btn-twitter" href="/login/twitter/">
+    Sign in with <b>Twitter</b>
+</a></p>
+<p><a class="btn-auth btn-facebook" href="/login/facebook/">
+    Sign in with <b>Facebook</b>
+</a></p>
+<p><a class="btn-auth btn-google" href="/login/google/">
+    Sign in with <b>Google</b>
+</a></p>
+<p><a class="btn-auth btn-github" href="/login/github/">
+    Sign in with <b>GitHub</b>
+</a></p>
+ </div>
+
+ <div class="clearfix"></div>
+{% endif %}
+
+<br/>
+<h2>Julkaistuja kirjoja</h2>
+<ul class="list">
+     
+        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/alchemy/">Alchemy</a></li>
+	   
+	      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/audacity/">Audacity</a></li>
+	      
+	         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/avidemux/">Avidemux</a></li>
+		    
+		       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/avoin-mediatuotanto/">Avoin mediatuotanto</a></li>
+		      
+			  
+			     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/blender/">Blender</a></li>
+				
+				   <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/booksprint/">Booksprint</a></li>
+				   
+				      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/booktype/">Booktype</a></li>
+				    
+					 
+					    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ffmpeg2theora/">ffmpeg2theora</a></li>
+					    
+					       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/firefox/">Firefox</a></li>
+					       
+					          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/floss-manuals/">FLOSS Manuals</a></li>
+						  
+						     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/gtranscode/">Gtranscode</a></li>
+						     
+						        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/handbrake/">Handbrake</a></li>
+							
+							   
+							      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/icecast/">Icecast</a></li>
+							      
+							         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/inkscape/">Inkscape</a></li>
+								 
+								    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/internet-archive/">Internet Archive</a></li>
+								    
+												       
+								          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/internet-tietoturvan-perusteet/">Internet-tietoturvan perusteet</a></li>
+									  
+									     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/jubler/">Jubler</a></li>
+									     
+									        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/kino/">Kino</a></li>
+										
+					
+										   
+										      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/komentorivin-perusteet/">Komentorivin perusteet</a></li>
+										      
+										         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/libreoffice/">LibreOffice</a></li>
+											 
+											    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/linphone/">Linphone</a></li>
+											    
+											       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/miro/">Miro</a></li>
+											       
+											          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/muse/">MuSE</a></li>
+												  
+												     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ogg-theora/">OGG Theora</a></li>
+												     
+												        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openoffice/">OpenOffice</a></li>
+													
+													   <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openshot/">OpenShot</a></li>
+													   
+													      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openstreetmap/">OpenStreetMap</a></li>
+													      
+													         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/processing/">Processing</a></li>
+														 
+														    
+														       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/scribus/">Scribus</a></li>
+														       
+														          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/statusnet/">StatusNet</a></li>
+															  
+															     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/stellarium/">Stellarium</a></li>
+															     
+															        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/tekstitys/">Tekstitys</a></li>
+																
+																										   
+																      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ubuntu-tutuksi/">Ubuntu tutuksi</a></li>
+																      
+																         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/valo-oppilaitoksissa/">VALO oppilaitoksissa</a></li>
+																	 
+																	    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/wordpress/">WordPress</a></li>
+																	 																	    </ul>
+<div class="clearfix"></div>
+
 {% if show_history %}
-<h3>{% trans "Recent activity" %}</h3>
+<br/>
+<h2>{% trans "Recent activity" %}</h2>
 
 {% for activity in activity_history %}
 	<div class="recent-activity" itemscope itemtype="http://schema.org/UpdateAction">

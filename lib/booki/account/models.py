@@ -39,7 +39,7 @@ class UserProfile(models.Model):
     image = models.ImageField(_('image'), upload_to=settings.PROFILE_IMAGE_UPLOAD_DIR, null=True)
     description = models.CharField(_('description'), max_length=2500, blank=False,null=False,default='')
     user = models.ForeignKey(User, unique=True, verbose_name=_("user"))
-
+    
 class UserPassword(models.Model):
     """
     Stores data when user starts process of password changing.

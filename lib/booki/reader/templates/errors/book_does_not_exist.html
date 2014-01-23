@@ -7,5 +7,22 @@
  <body>
   <h1>{% trans "Book does not exist!" %}</h1>
   <p>{% blocktrans %}Can't find book "{{ book_name }}".{% endblocktrans %}</p>
+  <h3><a href="http://books.okf.fi/list-books/">Mene kirjalistaan</h3></a>
+  <h2>Tai kokeile täsmähakua</h2>
+  <script>
+  (function() {
+    var cx = '004113797622572594359:hcfv5opewy0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div style="width:500px;">
+<gcse:searchbox-only></gcse:searchbox-only>
+</div>
  </body>
 </html>
