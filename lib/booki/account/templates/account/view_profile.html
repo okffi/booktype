@@ -63,8 +63,8 @@
 <div id="tabs" itemscope itemtype="http://schema.org/Person">
   <ul>
     <li><a href="#tabs-dashboard">{% trans "Dashboard" %}</a></li>
-    <li><a href="#tabs-books">{% if user.username == request.user.username %}{% trans "My Books" %}{% else %} {% trans "Books" %} {% endif %}</a></li>
     {% if user.username == request.user.username %}
+    <li><a href="#tabs-books">{% if user.username == request.user.username %}{% trans "My Books" %}{% else %} {% trans "Books" %} {% endif %}</a></li>
       <li><a href="#tabs-settings">{% trans "Settings" %}</a></li>
       <li><a href="#tabs-oauth">{% trans "OAuth" %}</a></li>
     {% endif %}
@@ -84,12 +84,12 @@
             {% user_followbutton user.username request.user.username %}
             
             {% endif %}</p>
-          <p><a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/rss/user/{{ user.username }}/">{% trans "Follow my changes" %}</a></p>
+          <p><a class="rss" href="{{ request.META.SCRIPT_NAME }}/feeds/atom/user/{{ user.username }}/">{% trans "Follow my changes" %}</a></p>
       </section>
       <section class="profile-description">
            <h5>{% trans "Description" %}</h5>
            {% if user_description %}
-            <p class="des-text" itemprop="description">{{ user_description|safe }}</p>
+            <p class="des-text" itemprop="description">{{ user.get_profile.description }}</p>
            {% else %}
             <p class="des-text" itemprop="description">{% trans "There is no description for this user." %}</p>
            {% endif %}
@@ -218,6 +218,7 @@
     <dd>
       <input type="file" name="profile"/>
     </dd>
+
         <dt><label>{% trans "Notification filter" %}</label></dt>
     <dd>
       <input type="text" name="notification" value="{{ notification_filter }}"/>
