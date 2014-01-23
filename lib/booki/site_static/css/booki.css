@@ -2749,18 +2749,21 @@ label.error {
     border:none;
 }
 
-/* Laitetaan pre-elementti esimuotoiltuja koodinpätkiä varten */
+/* pre koodinpätkille */
 
 pre {
-    font-size: 13px;
-    line-height: 140%;
-    color:#00FF00;
-    background-color:#000000;
+    white-space: pre;
+    margin: 0px;
+    padding: 12px;
     font-family: Ubuntu, sans-serif;
-    padding:30px;
-    margin:10px;
-    overflow:auto;
-    box-shadow: 10px 10px 27px -14px rgba(0,0,0,0.75);
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+    overflow: auto;
+    color: rgb(64, 64, 64);
+    border: 1px solid rgb(192, 192, 192);
+    background-color: rgb(237, 233, 242);
+    box-shadow: 0px 1px 2px rgb(170, 170, 170);
 }
 
 /* Blockquote sitaateille */
@@ -2795,59 +2798,95 @@ color: rgb(255, 127, 0);
 
 /* Oppaiden elementtejä */
 
+/* Huomautus ja varoitus */
+
+/* Lainataan värejä Read The Docsista */
+
+div.huomaa {
+    background: none repeat scroll 0% 0% rgb(231, 242, 250);
+    padding-bottom:10px;
+}
+div.huomaa h3 {
+    background-color: rgb(106, 176, 222);
+    color: #ffffff !important;
+    margin: 0px !important;
+    padding: 5px !important;
+    text-transform:uppercase;
+}
+
+div.varoitus {
+    background-color: rgb(255, 237, 204);
+    padding-bottom:10px;
+}
+div.varoitus h3 {
+    background-color: rgb(240, 179, 126);
+    color: #ffffff !important;
+    margin: 0px !important;
+    padding: 5px !important;
+    text-transform:uppercase;
+}
+div.varoitus p, div.huomaa p {
+    padding-left:10px !important;
+}
+
+/* Omat */
+
+/*
 div.huomaa, div.varoitus {
-    max-width: 540px;
-     background-size: auto 90%; 
-     background-color:#ffffff;
-     border: 1px solid rgb(192, 192, 192);
-     box-shadow: 0px 1px 2px rgb(170, 170, 170);
-     -webkit-border-radius: 20px;
-     -moz-border-radius: 20px;
-     border-radius: 20px;
+max-width: 540px;
+background-size: auto 90%;
+background-color:#ffffff;
+border: 1px solid rgb(192, 192, 192);
+box-shadow: 0px 1px 2px rgb(170, 170, 170);
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
 }
 
 div.huomaa {
-     background: url(http://books.okf.fi/site_static/images/Pictogram_Information.png) right 30px no-repeat;
-     background-size: auto 70%;
+background: url(http://books.okf.fi/site_static/images/Pictogram_Information.png) right 30px no-repeat;
+background-size: auto 70%;
 }
 
 div.huomaa h3, div.varoitus h3 {
-    -webkit-border-top-left-radius: 20px;
-    -webkit-border-top-right-radius: 20px;
-    -moz-border-radius-topleft: 20px;
-    -moz-border-radius-topright: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-     font-family: Ubuntu, sans-serif;
-     text-align:center;
-     text-transform:uppercase;
-     background-color:rgb(237, 233, 242) !important;
-     color: rgb(75, 37, 130) !important;
-     padding:0px !important;
-     margin:0px !important;
+-webkit-border-top-left-radius: 20px;
+-webkit-border-top-right-radius: 20px;
+-moz-border-radius-topleft: 20px;
+-moz-border-radius-topright: 20px;
+border-top-left-radius: 20px;
+border-top-right-radius: 20px;
+font-family: Ubuntu, sans-serif;
+text-align:center;
+text-transform:uppercase;
+background-color:rgb(237, 233, 242) !important;
+color: rgb(75, 37, 130) !important;
+padding:0px !important;
+margin:0px !important;
 }
 
 div.huomaa p, div.varoitus p {
-     padding:10px !important;
-     padding-right:100px !important;
-     color:#000000 !important;
-     text-align:left;
-     font-size: 15px !important;
+padding:10px !important;
+padding-right:100px !important;
+color:#000000 !important;
+text-align:left;
+font-size: 15px !important;
 }
 
 div.huomaa li, div.varoitus li {
-     padding:10px !important;
-     padding-right:100px !important;
-     color:#000000 !important;
-     text-align:left;
-     font-size: 15px !important;
+padding:10px !important;
+padding-right:100px !important;
+color:#000000 !important;
+text-align:left;
+font-size: 15px !important;
 }
 
 
 div.varoitus {
-     background: url(http://books.okf.fi/site_static/images/Pictogram_Caveats.png) right 30px no-repeat;
-     background-size: auto 70%;
+background: url(http://books.okf.fi/site_static/images/Pictogram_Caveats.png) right 30px no-repeat;
+background-size: auto 70%;
 }
+*/
+/* Kaavakuva? */
 
 div.kaavakuva {
      width:540px;
@@ -2855,8 +2894,8 @@ div.kaavakuva {
      color:#ffffff !important;
      text-align:left;
      -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-     -moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-     box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+     -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+     box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
      background-color:#ffffff;
      -webkit-border-radius: 40px;
      -moz-border-radius: 40px;
@@ -2872,6 +2911,22 @@ height:149px !important;
 div.proseduuri {
 }
 
+/* Siistimmät tablet */
+
+table {
+     border: 1px solid rgb(192, 192, 192);
+     box-shadow: 0px 1px 2px rgb(170, 170, 170);
+}
+
+tr {
+
+}
+
+span.elementti {
+	border: 1px solid rgb(192, 192, 192);
+    	background-color: rgb(237, 233, 242);
+}
+
 /*
 em {
 color: rgb(8, 84, 199);
@@ -2879,4 +2934,3 @@ text-shadow: 0px 0px 1px rgb(32, 220, 244);
 font-weight: 400;
 }
 */
-
