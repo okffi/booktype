@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load messaging_tags i18n %}
 
 {% block header %}
  <title>{% trans "Booktype" %}</title>
@@ -13,26 +13,36 @@
  
 {% endblock %}
 
-       {% block sidebar %}
-       <div style="padding: 5px; background:#ffffff; margin-left:5px;" id="mood">
-         <h4 class="group">Uutiset</h4>
-         {% if request.user.is_authenticated %}
-         <div id="mood">
-           {% tag_messagefield 'uutiset' %}
-         </div>
-         {% endif %}
-         <div class="group-timeline">{% tag_timeline 'uutiset' %}</div>
-       </div>
-       {% endblock %}
-
+{% block sidebar %}
+<div style="padding: 5px; background:#ffffff; margin-left:5px;" id="mood">
+<h4 class="group">Uutiset</h4>
+{% if request.user.is_authenticated %}
+<div id="mood">
+{% tag_messagefield 'uutiset' %}
+</div>
+{% endif %}
+<div class="group-timeline">{% tag_timeline 'uutiset' %}</div>
+</div>
+{% endblock %}
 
 {% block content %}
 <div id="intro">
-<h2>{% trans "Welcome to Booktype" %}</h2>
+<h1>{% trans "Welcome to Booktype" %}</h1>
+
+ <div class="clearfix"></div>
+
+
+{% include "portal/welcome_message.html" %}
+
+<div class="clearfix"></div>
 
 {% if request.user.is_authenticated %}
-<!-- <h3>Show message when user is signed in</h3>-->
+<br/>
+<h3>Tervetuloa takaisin!</h3>
 {% else %}
+<br/>
+<h2>Rekisteröidy ja kirjaudu sisään!</h2>
+
  <div class="signin-block">
    {% include "account/form_signin.html" %}
  </div>
@@ -42,7 +52,8 @@
    {% include "account/form_register.html" %}
  </div>
 
- <div class="clearfix"></div>
+
+<div class="clearfix"></div>
 
  <div>
  <h3>Voit kirjautua myös käyttäjätiliisi liittämilläsi tunnuksilla</h3>
@@ -61,35 +72,116 @@
  </div>
 
  <div class="clearfix"></div>
-
 {% endif %}
 
-{% include "portal/welcome_message.html" %}
+<br/>
+<h2>Julkaistuja kirjoja</h2>
+<ul class="list">
+     
+        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/alchemy/">Alchemy</a></li>
+	   
+	      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/audacity/">Audacity</a></li>
+	      
+	         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/avidemux/">Avidemux</a></li>
+		    
+		       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/avoin-mediatuotanto/">Avoin mediatuotanto</a></li>
+		      
+			  
+			     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/blender/">Blender</a></li>
+				
+				   <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/booksprint/">Booksprint</a></li>
+				   
+				      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/booktype/">Booktype</a></li>
+				    
+					 
+					    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ffmpeg2theora/">ffmpeg2theora</a></li>
+					    
+					       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/firefox/">Firefox</a></li>
+					       
+					          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/floss-manuals/">FLOSS Manuals</a></li>
+						  
+						     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/gtranscode/">Gtranscode</a></li>
+						     
+						        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/handbrake/">Handbrake</a></li>
+							
+							   
+							      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/icecast/">Icecast</a></li>
+							      
+							         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/inkscape/">Inkscape</a></li>
+								 
+								    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/internet-archive/">Internet Archive</a></li>
+								    
+												       
+								          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/internet-tietoturvan-perusteet/">Internet-tietoturvan perusteet</a></li>
+									  
+									     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/jubler/">Jubler</a></li>
+									     
+									        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/kino/">Kino</a></li>
+										
+					
+										   
+										      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/komentorivin-perusteet/">Komentorivin perusteet</a></li>
+										      
+										         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/libreoffice/">LibreOffice</a></li>
+											 
+											    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/linphone/">Linphone</a></li>
+											    
+											       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/miro/">Miro</a></li>
+											       
+											          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/muse/">MuSE</a></li>
+												  
+												     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ogg-theora/">OGG Theora</a></li>
+												     
+												        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openoffice/">OpenOffice</a></li>
+													
+													   <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openshot/">OpenShot</a></li>
+													   
+													      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/openstreetmap/">OpenStreetMap</a></li>
+													      
+													         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/processing/">Processing</a></li>
+														 
+														    
+														       <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/scribus/">Scribus</a></li>
+														       
+														          <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/statusnet/">StatusNet</a></li>
+															  
+															     <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/stellarium/">Stellarium</a></li>
+															     
+															        <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/tekstitys/">Tekstitys</a></li>
+																
+																										   
+																      <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/ubuntu-tutuksi/">Ubuntu tutuksi</a></li>
+																      
+																         <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/valo-oppilaitoksissa/">VALO oppilaitoksissa</a></li>
+																	 
+																	    <li itemscope itemtype="http://schema.org/Book"><a itemprop="url" href="/wordpress/">WordPress</a></li>
+																	 																	    </ul>
+<div class="clearfix"></div>
 
 {% if show_history %}
 <br/>
 <h2>{% trans "Recent activity" %}</h2>
 
 {% for activity in activity_history %}
-<div class="recent-activity" itemscope itemtype="http://schema.org/UpdateAction">
+	<div class="recent-activity" itemscope itemtype="http://schema.org/UpdateAction">
         <div class="image">
            <img src="{% url view_profilethumbnail activity.user %}?width=48" alt="{{activity.user}}">
         </div><!--end .image-->
 
-	<div class="user" itemprop="name">
-          <a itemprop="agent" href="{% url view_profile activity.user.username %}">{{ activity.user.first_name }}</a> &nbsp;&nbsp; <span itemprop="endTime" content="{{ activity.modified|date:"c" }}">{{ activity.modified|date}} {{ activity.modified|time}}</span> 
-	      <div class="chapter">  
+    	<div class="user" itemprop="name">
+        	<a itemprop="agent" href="{% url view_profile activity.user.username %}">{{ activity.user.first_name }}</a> &nbsp;&nbsp; <span itemprop="endTime" content="{{ activity.modified|date:"c" }}">{{ activity.modified|date}} {{ activity.modified|time}}</span> 
+  		    <div class="chapter">  
                  {% if activity.kind == 1 %}
                  {% trans "Created new chapter" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-		 {% endif %}         
-		 {% if activity.kind == 2 %}
+				{% endif %}         
+		{% if activity.kind == 2 %}
              {% trans "Chapter save" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
                                 {% endif %}
-		  {% if activity.kind == 3 %}
+        	 {% if activity.kind == 3 %}
                {% trans "Chapter rename" %} <a itemprop="url" href="{% url book_chapter activity.book.url_title activity.chapter.url_title %}">"{{activity.chapter.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
@@ -98,37 +190,36 @@
                      {% trans "Section create" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                      <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-                     {% endif %}
+                                {% endif %}				
                 {% if activity.kind == 10 %}
                 {% trans "Created new book" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a>
                  </div>     
-		 {% endif %}
+				{% endif %}
                      {% if activity.kind == 11 %}
 
                          {% trans "Minor version" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
 
-		    {% endif %}
+		   {% endif %}
 
                      {% if activity.kind == 12 %}
  
                            {% trans "Major version" %} <a itemprop="url" href="{% url book_view activity.book.url_title  %}">"{{activity.book.title}}"</a>
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
  
-		    {% endif %}
+		   {% endif %}
                          {% if activity.kind == 13 %}
  
                    {% trans "Uploaded" %} <a itemprop="url" href="{% url book_info activity.book.url_title  %}">"{{activity.book.title}}"</a>.
                  <div class="book-title"><a href="{{activity.book.url_title}}/_info/">ℬ{{activity.book.url_title}}</a></div>
-		    {% endif %}
-		 </div><!-- End of .chapter -->     
-	      </div><!-- end .user-->
+		   {% endif %}
+			</div><!-- End of .chapter -->     
+		</div><!-- end .user-->
 	</div><!-- end .recent-activity-->
 
 {% endfor %}
 {% endif %}
-
 </div><!-- end intro -->
 
 
