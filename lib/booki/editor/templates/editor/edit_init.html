@@ -2,70 +2,69 @@
 <script type="text/javascript">
         $(function() {
                 window.EVIL_TINY_OPTIONS = {
-	// mode : 'specific_textarea',
-        mode : 'exact', 
-	language : 'fi',
-        // Location of TinyMCE script
-        script_url : '{{ request.META.SCRIPT_NAME}}/site_static/js/tiny_mce/tiny_mce.js',
-        theme : "advanced",
-	extended_valid_elements : "pre,code,meta[itemprop|itemscope|itemtype|content],script[charset|defer|language|src|type],span[itemprop|itemscope|itemtype|content|align<center?justify?left?right|class|dir<ltr?rtl|id|lang|onclick|ondblclick|onkeydown|onkeypress|onkeyup|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|style|title],div[itemprop|itemscope|itemtype|content|align<center?justify?left?right|class|dir<ltr?rtl|id|lang|onclick|ondblclick|onkeydown|onkeypress|onkeyup|onmousedown|onmousemove|onmouseout|onmouseover|onmouseup|style|title]]",
-        plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,spellchecker,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,bookilink,bookiimage,bookimessage,bookifootnotes,bookicomments,booki,style,wordcount",
-        theme_advanced_buttons1 : "undo,redo,|,cut,copy,paste,|,search,replace,|,bold,italic,underline,strikethrough,|,bullist,numlist,|,justifyleft,justifycenter,justifyright,justifyfull,|,bookilink,unlink,anchor,bookiimage",
-        theme_advanced_buttons2 : "pastetext,pasteword,|,formatselect,fontselect,fontsizeselect,|,outdent,indent,blockquote,|,forecolor,backcolor,|,cleanup,code,fullscreen,bookifootnotes,|,spellchecker,|,styleprops",
-        theme_advanced_buttons3 : "tablecontrols,media,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,|,print,|,pagebreak,bookimessage,bookicomments",
-        theme_advanced_buttons4 : "styleselect",
-        theme_advanced_toolbar_location : "top",
-        theme_advanced_toolbar_align : "left",
-        theme_advanced_statusbar_location : "bottom",
-        theme_advanced_resizing : true,
-        theme_advanced_blockformats : "div,p,h1,h2,h3,h4,h5,h6,blockquote,pre",
-	theme_advanced_styles : "Huomaa=huomaa;Varoitus=varoitus,Elementti=elementti",
+	                //mode: 'specific_textarea',
+                        mode: 'exact', 
 
-	style_font :
+	                {% if request.LANGUAGE_CODE == "ru" %}
+   	                  'language': 'ru',
+                        {% endif %}
 
-        "Arial=arial,helvetica,sans-serif;"+
-        "Courier New=courier new,courier;"+
-        "Georgia=georgia,palatino;"+
-        "Tahoma=tahoma,arial,helvetica,sans-serif;"+
-        "Times New Roman=times new roman,times;"+
-        "Verdana=verdana,geneva;"+
-        "Impact=impact,chicago;"+
-        "Ubuntu=Ubuntu,sans-serif;"+
-        "Wingdings=wingdings,zapf dingbats",
+	                {% if request.LANGUAGE_CODE == "es" %}
+   	                  'language': 'es',
+                        {% endif %}
 
-	theme_advanced_fonts : 
+	                {% if request.LANGUAGE_CODE == "sq" %}
+   	                  'language': 'sq',
+                        {% endif %}
 
-	"Arial=arial,helvetica,sans-serif;"+
-        "Courier New=courier new,courier;"+
-        "Georgia=georgia,palatino;"+
-        "Tahoma=tahoma,arial,helvetica,sans-serif;"+
-        "Times New Roman=times new roman,times;"+
-        "Verdana=verdana,geneva;"+
-        "Impact=impact,chicago;"+
-	"Ubuntu=Ubuntu,sans-serif;"+
-        "Wingdings=wingdings,zapf dingbats",
-	
-	bookiadv_hidden: 0,
-	spellchecker_languages : "+Suomi=fi",
-        // Example content CSS (should be your site CSS)
-        content_css : "{{ request.META.SCRIPT_NAME}}/site_static/css/booki.css",
-     	theme_advanced_font_sizes: "10px,12px,13px,14px,16px,18px,20px",
-	font_size_style_values: "10px,12px,13px,14px,16px,18px,20px",
-	relative_urls: false,
-	remove_script_host: false,
-	convert_urls: true,
-	media_strict: false, 
-	media_use_script: true,
-	setup: function(ed) {
-	 ed.onBeforeRenderUI.add(function(ed, cm) {
-         tinymce.EditorManager.i18n['fi.advanced.pre'] = 'Koodi';
-	 tinymce.EditorManager.i18n['fi.advanced.blockquote'] = 'Sitaatti';
-	 });
-	ed.onPaste.add(function(ed, e) {
-	return false;
-	});
-	}
-        };
+	                {% if request.LANGUAGE_CODE == "it" %}
+   	                  'language': 'it',
+                        {% endif %}
+
+                        // Location of TinyMCE script
+                        script_url : '{{ request.META.SCRIPT_NAME}}/site_static/js/tiny_mce/tiny_mce.js',
+
+                        // General options
+                        theme : "advanced",
+                        plugins : "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,bookilink,bookiimage,bookimessage,bookifootnotes,bookicomments,booki",
+
+                        // Theme options
+                        theme_advanced_buttons1 : "undo,redo,|,cut,copy,paste,|,search,replace,|,bold,italic,underline,strikethrough,|,bullist,numlist,|,justifyleft,justifycenter,justifyright,justifyfull,|,bookilink,unlink,anchor,bookiimage,|,bookiadv",
+                        theme_advanced_buttons2 : "pastetext,pasteword,|,formatselect,fontselect,fontsizeselect,|,outdent,indent,blockquote,|,forecolor,backcolor,|,cleanup,code,fullscreen,bookifootnotes",
+                        theme_advanced_buttons3 : "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,iespell,|,print,|,ltr,rtl,|,pagebreak,bookimessage",
+
+                        theme_advanced_buttons4 : "",
+                        theme_advanced_toolbar_location : "top",
+                        theme_advanced_toolbar_align : "left",
+                        theme_advanced_statusbar_location : "bottom",
+                        theme_advanced_resizing : true,
+	                theme_advanced_fonts :  "Arial=arial,helvetica,sans-serif;"+
+	                                        "Courier New=courier new,courier;"+
+	                                        "Georgia=georgia,palatino;"+
+                                                "Tahoma=tahoma,arial,helvetica,sans-serif;"+
+                                                "Times New Roman=times new roman,times;"+
+                                                "Verdana=verdana,geneva;"+
+                                                "Impact=impact,chicago;"+
+                                                "Wingdings=wingdings,zapf dingbats",
+
+	                bookiadv_hidden: 1,
+
+                        // Example content CSS (should be your site CSS)
+                        content_css : "{{ request.META.SCRIPT_NAME}}/site_static/css/content.css",
+     	                theme_advanced_font_sizes: "10px,12px,13px,14px,16px,18px,20px",
+	                font_size_style_values : "10px,12px,13px,14px,16px,18px,20px",
+
+//                        document_base_url: '{{ request.META.SCRIPT_NAME|default:"/" }}',
+//	                relative_urls: true,
+	                convert_urls: false,
+	                elements: "nourlconvert",
+
+	                setup: function(ed) {
+	                      ed.onPaste.add(function(ed, e) {
+	                           return false;
+	                      });
+	                }
+                };
         });
 </script>
 
