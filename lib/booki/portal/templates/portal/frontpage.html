@@ -13,6 +13,19 @@
  
 {% endblock %}
 
+       {% block sidebar %}
+       <div style="padding: 5px; background:#ffffff; margin-left:5px;" id="mood">
+         <h4 class="group">Uutiset</h4>
+         {% if request.user.is_authenticated %}
+         <div id="mood">
+           {% tag_messagefield 'uutiset' %}
+         </div>
+         {% endif %}
+         <div class="group-timeline">{% tag_timeline 'uutiset' %}</div>
+       </div>
+       {% endblock %}
+
+
 {% block content %}
 <div id="intro">
 <h2>{% trans "Welcome to Booktype" %}</h2>
@@ -30,6 +43,25 @@
  </div>
 
  <div class="clearfix"></div>
+
+ <div>
+ <h3>Voit kirjautua myös käyttäjätiliisi liittämilläsi tunnuksilla</h3>
+ <p><a class="btn-auth btn-twitter" href="/login/twitter/">
+    Sign in with <b>Twitter</b>
+</a></p>
+<p><a class="btn-auth btn-facebook" href="/login/facebook/">
+    Sign in with <b>Facebook</b>
+</a></p>
+<p><a class="btn-auth btn-google" href="/login/google/">
+    Sign in with <b>Google</b>
+</a></p>
+<p><a class="btn-auth btn-github" href="/login/github/">
+    Sign in with <b>GitHub</b>
+</a></p>
+ </div>
+
+ <div class="clearfix"></div>
+
 {% endif %}
 
 {% include "portal/welcome_message.html" %}
