@@ -111,8 +111,11 @@ else:
                            # messaging application
                            url(r'^messaging/', include('booki.messaging.urls')),
 									
-									# social auth
-									url(r'', include('social_auth.urls')),									
+			   # social auth
+                           url(r'', include('social_auth.urls')),								   
+
+                           #search
+                           (r'^search/', include('haystack.urls')),
 									
                            # reader
                            url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls'))
