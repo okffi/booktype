@@ -103,6 +103,28 @@
         </div>
 
         <div class="col-xs-4">
+            <div class="box white">
+
+        <h2 class="box-title">Tags</h2>
+        <ul class="list border-top">
+	{% with object.tags.all as tags %}
+        {% if tags %}
+            <ul class="tag-list">
+              {% for tag in tags %}
+                <li>
+                  <a href="">{{ tag.name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+        {% endif %}
+      {% endwith %}
+                </ul>
+            </div>
+            </div>
+
+
+
+        <div class="col-xs-4">
             {% if user.is_authenticated %}
             <div class="box gray">
                 {% include "account/form_signedin.html" %}
