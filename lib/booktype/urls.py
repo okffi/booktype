@@ -78,4 +78,7 @@ urlpatterns += patterns('',
 
     # new booktype reader app
     url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booktype.apps.reader.urls', namespace='reader')),
+
+    # social auth                                                
+    url('', include('social.apps.django_app.urls', namespace='social')),
 )
