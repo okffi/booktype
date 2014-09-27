@@ -491,3 +491,5 @@ def view_books_autocomplete(request, *args, **kwargs):
                                 term in chapter.url_title)]
 
     return HttpResponse(json.dumps(data), "text/plain")
+
+

@@ -117,22 +117,10 @@
               {% endfor %}
             </ul>
         {% endif %}
-      {% endwith %}
-                </ul>
+	{% endwith %}
+        </ul>
 
-     <form method="post" action="{% url 'reader:book-set_tags' book.url_title %}" class="tagit-form">
-            <div class="input-group">
-              {% with object.get_set_tags_form as set_tags_form %}
-                {{ set_tags_form.tags }}
-              {% endwith %}
-              <span class="input-group-btn">
-                <button class="btn btn-success" type="submit">
-                  Save tags
-                </button>
-              </span>
-            </div>
-          </form>
-
+     
             </div>
             </div>
 

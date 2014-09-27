@@ -24,6 +24,8 @@ from django.utils.translation import ugettext_lazy as _
 
 import booki.editor.signals
 
+from taggit.managers import TaggableManager
+from taggit.models import TaggedItemBase
 
 # License
 
@@ -153,6 +155,9 @@ class BookiGroup(models.Model):
 
 # Book
 
+class TaggedBook(TaggedItemBase):
+    content_object = models.ForeignKey('Book')
+
 class Book(models.Model):
     url_title = models.CharField(_('url title'), max_length=2500, blank=False, unique=True) # can it be blank?
     title = models.CharField(_('title'), max_length=2500, blank=False)
@@ -178,6 +183,8 @@ class Book(models.Model):
 
     description = models.TextField(_('description'), null=False, default='')
     cover = models.ImageField(_('cover'), upload_to=settings.COVER_IMAGE_UPLOAD_DIR, null=True)
+
+    tags = TaggableManager(through=TaggedBook)
 
     def get_version(self, version=None):
         """
