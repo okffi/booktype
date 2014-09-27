@@ -1,5 +1,6 @@
 {% extends "core/base.html" %}
 {% load i18n staticfiles profile reader_tags %}
+{% load comments %}
 
 {% block extra_header %}
 <script type="text/javascript" src="{% static 'reader/js/infopage.js' %}"></script>
@@ -106,6 +107,7 @@
             <div class="box white">
 
         <h2 class="box-title">Tags</h2>
+
         <ul class="list border-top">
 	{% with object.tags.all as tags %}
         {% if tags %}
@@ -185,6 +187,12 @@
                 </ul>
                 {% endif %}
             </div>
+
+<div class="box white">
+<h2 class="box-title">Kommentit</h2>
+{% render_comment_list for book %}
+{% render_comment_form for book %}
+</div>
 
             {% if book.get_versions %}
             <div class="box white">

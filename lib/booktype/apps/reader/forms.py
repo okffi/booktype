@@ -40,3 +40,5 @@ class EditBookInfoForm(BaseBooktypeForm, forms.ModelForm):
 
         if not user.is_superuser:
             del self.fields['owner']
+
+
