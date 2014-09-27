@@ -19,6 +19,8 @@ from django.conf import settings
 from django.views.generic.base import TemplateView
 
 from booktype.apps.reader.api import BookResource
+from booktype.apps.reader.api import ChapterResource
+
 
 SPUTNIK_DISPATCHER = ((r'^/booki/$', 'booki.channels.main'),
                       (r'^/booki/profile/(?P<profileid>.+)/$', 'booki.channels.profile'),
@@ -27,6 +29,7 @@ SPUTNIK_DISPATCHER = ((r'^/booki/$', 'booki.channels.main'),
                       )
 
 book_resource = BookResource()
+chapter_resource = ChapterResource()
 
 urlpatterns = patterns(
     '',
@@ -82,4 +85,5 @@ urlpatterns = patterns(
    
     # tastypie
     (r'^api/', include(book_resource.urls)),
+    (r'^api/', include(chapter_resource.urls)),
 )
