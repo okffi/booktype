@@ -73,6 +73,9 @@ urlpatterns += patterns('',
     #robots.txt
     (r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
 
+    #search
+    (r'^search/', include('haystack.urls')),
+
     # new booktype reader app
     url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booktype.apps.reader.urls', namespace='reader')),
 )

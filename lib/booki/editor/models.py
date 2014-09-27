@@ -367,7 +367,7 @@ class BookVersion(models.Model):
         return '%d.%d' % (self.major, self.minor)
 
     def get_absolute_url(self):
-        return '%s/%s/_v/%s/' % (settings.BOOKI_URL, self.book.url_title, self.get_version())
+        return '%s/%s/%s/' % (settings.BOOKI_URL, self.book.url_title, self.get_version())
         
     def __unicode__(self):
         return '%d.%d (%s)' % (self.major, self.minor, self.name)
@@ -401,7 +401,8 @@ class Chapter(models.Model):
 
     def get_absolute_url(self):
         return '%s/%s/%s/' % (settings.BOOKI_URL, self.book.url_title, self.url_title)
-
+#        return '%s/%s/_draft/_v/%s/%s/' % (settings.BOOKI_URL, self.book.url_title, self.book.get_version(), self.url_title)
+#         return '%s/%s/%s/' % (settings.BOOKI_URL, self.book.url_title, self.url_title)                                              
 
     def __unicode__(self):
         return self.title
