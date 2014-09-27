@@ -167,6 +167,16 @@ class DeleteBookView(SingleNextMixin, LoginRequiredMixin, BaseReaderView, Delete
 
         return self.render_to_response(context=self.get_context_data())
 
+def set_tags(request, bookid):
+    book = get_object_or_404(Book, bookid)
+    if not request.user.is_authenticated() or not request.user.is_staff:
+        return render_403(request)
+    form = BookTagForm(book, request.POST)
+    if form.is_valid():
+        form.save()
+        messages.add_message(request, messages.SUCCESS,
+                _('Tags have been set for this book'))
+    return redirect(book)
 
 class DraftChapterView(BaseReaderView, BasePageView, DetailView):
     template_name = "reader/book_draft_page.html"
