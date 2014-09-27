@@ -36,6 +36,4 @@ urlpatterns = patterns('',
    url(r'^_draft/(?P<chapter>[\w\s\_\.\-]+)/static/(?P<attachment>.*)$', 'booktype.apps.core.views.staticattachment'),
    url(r'^_draft/static/(?P<attachment>.*)$', 'booktype.apps.core.views.staticattachment'),
    url(r'^_draft/$', DraftChapterView.as_view(), name='draft_chapter_page'),
-   #For Search
-   url(r'^(?P<chapter>[\w\s\_\.\-]+)/$', 'booki.reader.views.book_chapter', name='book_chapter'),
 )

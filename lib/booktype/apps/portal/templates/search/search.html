@@ -1,5 +1,16 @@
+{% extends '/core/base.html' %}
+{% load i18n staticfiles profile messaging_tags reader_tags %}
 
-    <h2>Hakutulokset</h2>
+{% block content %}
+<!-- Bookbar -->
+<div class="bookbar">
+  <h1><span class="draft-stat">Haku</span></h1>
+</div>
+<!-- end Bookbar -->
+
+<div class="container">
+
+ <div class="row two-col">
 
     <form method="get" action=".">
         <table>
@@ -34,4 +45,7 @@
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
     </form>
+    </div>
+</div>
 
+{% endblock %}
