@@ -18,7 +18,7 @@ from django.conf.urls import patterns, url, include
 from django.conf import settings
 from django.views.generic.base import TemplateView
 
-# This is dispatcher for Sputnik connections.
+from booktype.apps.reader.api import BookResource
 
 SPUTNIK_DISPATCHER = ((r'^/booki/$', 'booki.channels.main'),
                       (r'^/booki/profile/(?P<profileid>.+)/$', 'booki.channels.profile'),
@@ -26,11 +26,12 @@ SPUTNIK_DISPATCHER = ((r'^/booki/$', 'booki.channels.main'),
                       (r'^/booktype/book/(?P<bookid>\d+)/(?P<version>[\w\d\.\-.]+)/$', 'booktype.apps.edit.channel')
                       )
 
+book_resource = BookResource()
+
 urlpatterns = patterns(
     '',
-    # front page
+
     url(r'', include('booktype.apps.portal.urls', namespace="portal")),
-    # accounts
     url(r'^accounts/', include('booktype.apps.account.urls', namespace="accounts")),
 
     # booktype control center
@@ -43,8 +44,6 @@ urlpatterns = patterns(
     (r'^data/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.DATA_ROOT, 'show_indexes': True}),
 
-    # misc
-    # TODO: replace with new apps
     url(r'^_utils/profilethumb/(?P<profileid>[\w\d\_\.\-]+)/thumbnail.jpg$', 'booktype.apps.account.views.profilethumbnail', name='view_profilethumbnail'),
 
     # sputnik dispatcher
@@ -54,13 +53,9 @@ urlpatterns = patterns(
     # TODO: remove this application
     url(r'^messaging/', include('booki.messaging.urls')),
 
-    # importer application
     # TODO: Add namespace
-    url(r'^importer/', include('booktype.apps.importer.urls'))
-)
+    url(r'^importer/', include('booktype.apps.importer.urls')),
 
-urlpatterns += patterns('',
-    # export
     # TODO; Add namespace
     url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booktype.apps.loadsave.urls')),
 
@@ -70,19 +65,21 @@ urlpatterns += patterns('',
     # old editor app
     url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booki.editor.urls')),
 
-    #robots.txt
+    # robots.txt
     (r'^robots\.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
 
-    #search
+    # search
     (r'^search/', include('haystack.urls')),
 
     # new booktype reader app
     url(r'^(?P<bookid>[\w\s\_\.\-\d]+)/', include('booktype.apps.reader.urls', namespace='reader')),
 
     # comments
-
     (r'^comments/', include('django.contrib.comments.urls')),
 
     # social auth                                                
     url('', include('social.apps.django_app.urls', namespace='social')),
+   
+    # tastypie
+    (r'^api/', include(book_resource.urls)),
 )

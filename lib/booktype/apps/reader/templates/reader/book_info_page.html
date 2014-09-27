@@ -191,7 +191,9 @@
 <div class="box white">
 <h2 class="box-title">Kommentit</h2>
 {% render_comment_list for book %}
+{% if user.is_authenticated %}
 {% render_comment_form for book %}
+{% endif %}
 </div>
 
             {% if book.get_versions %}
