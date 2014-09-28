@@ -52,10 +52,6 @@ urlpatterns = patterns(
     # sputnik dispatcher
     url(r'^_sputnik/$', 'sputnik.views.dispatcher', {"map": SPUTNIK_DISPATCHER}, name='sputnik_dispatcher'),
 
-    # messaging application
-    # TODO: remove this application
-    url(r'^messaging/', include('booki.messaging.urls')),
-
     # TODO: Add namespace
     url(r'^importer/', include('booktype.apps.importer.urls')),
 
@@ -86,4 +82,5 @@ urlpatterns = patterns(
     # tastypie
     (r'^api/', include(book_resource.urls)),
     (r'^api/', include(chapter_resource.urls)),
+    url(r'^messaging/', include('booki.messaging.urls')),
 )

@@ -1,6 +1,7 @@
 {% extends "core/base.html" %}
 {% load i18n staticfiles profile reader_tags messaging_tags portal_tags %}
 
+
 {% block extra_header %}
 <script type="text/javascript" src="{% static 'core/js/jquery.steps.min.js' %}"></script>
 <script type="text/javascript">
@@ -23,7 +24,7 @@
                 </div>
             </div>
             {% endif %}
-            
+
             {% for message in messages %}
             <div class="{% if message.tags %}alert alert-{{ message.tags }}{% endif %} alert-dismissable fade in bk-dismiss" data-dismiss-secs="10">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -187,6 +188,8 @@
                     {% endfor %}
                 </ul>
             </div>
+
+
 
             {% if current_user != request.user %}
             <div class="box white">
