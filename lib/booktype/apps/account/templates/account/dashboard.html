@@ -20,10 +20,11 @@
             <div class="box profile-box purple">
                 {% include "account/other_user_box.html" %}
                 <div class="box-bottom-white">
-                    <button href="#" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="{% trans 'Follow me' %}">{% trans "FOLLOW ME" %}</button>
+		    <a href="http://fi.flossmanuals.net/messages/compose/{{ current_user }}/" title=""><button>LÄHETÄ VIESTI</button></a>
                 </div>
             </div>
             {% endif %}
+
 
             {% for message in messages %}
             <div class="{% if message.tags %}alert alert-{{ message.tags }}{% endif %} alert-dismissable fade in bk-dismiss" data-dismiss-secs="10">
@@ -142,14 +143,7 @@
                 </ul>
 
                 <p>{{ current_user.get_profile.description|escape }}</p>
-                <p><a href="#">{% trans "Follow my changes" %}</a> <img src="{% static 'core/img/rss.png' %}"></p>
-
-                <div class="content-divider"></div>
-
-                <p>
-                    {% user_followingbox user.username "account/dashboard_following.html" %}<br>
-                    {% user_followersbox user.username "account/dashboard_followers.html" %}
-                </p>
+                <p><a href="http://fi.flossmanuals.net/feeds/rss/user/{{ current_user.username }}/">{% trans "Follow my changes" %}</a> <img src="{% static 'core/img/rss.png' %}"></p>
 
                 <div class="box-bottom-white">
                     <button id="user-settings" data-href="{% url 'accounts:user_settings' user.username %}" role="button" class="btn btn-default float-left" rel="tooltip" title="" data-placement="bottom" data-original-title="{% trans 'Go to settings' %}">{% trans "Settings" as set_text %} {{ set_text|upper }}</button>
@@ -188,8 +182,6 @@
                     {% endfor %}
                 </ul>
             </div>
-
-
 
             {% if current_user != request.user %}
             <div class="box white">
