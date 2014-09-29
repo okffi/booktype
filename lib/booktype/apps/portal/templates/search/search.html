@@ -4,7 +4,7 @@
 {% block content %}
 <!-- Bookbar -->
 <div class="bookbar">
-  <h1><span class="draft-stat">Haku</span></h1>
+  <h1>Haku</h1>
 </div>
 <!-- end Bookbar -->
 
@@ -13,26 +13,49 @@
             <div class="col-xs-8">
                 <div class="box gray">
 
-    <form method="get" action=".">
-        <table>
-            {{ form.as_table }}
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <input type="submit" value="Search">
-                </td>
-            </tr>
-        </table>
-
+                <h2 class="box-title">Haku</h2>
+<p>Haku kirjojen sisällöstä</p>
+<div style="padding:20px;">
+    <form class="search" role="search" method="get" action="http://fi.flossmanuals.net/search/">
+      <div class="search">
         {% if query %}
-            <h3>Results</h3>
+        <input class="search" type="text" name="q" placeholder="{{ query }}"/>
+	{% else %}
+        <input class="search" type="text" name="q" placeholder="Hae"/>
+	{% endif %}
+        <button class="search" type="submit">Haku</button>
+      </div>
+    </form>
+</div>
+
+            {% if query %}
+
+            <h3>Tulokset haulle {{ query }}</h3>
+
+	    {% for result in page.object_list %}
+                <li>{{ result }}</li>
+		<li>{{ result.object.book.title }}</li>
+                <li>{{ result.object.title }}</li>
+                <li>{{ result.object.modified }}</li>
+                <li>{{ result.object.status }}</li>
+                <li>{{ result.object.created }}</li>
+                <li>{{ result.object.revision }}</li>
+                <li>{{ result.object.content }}</li>
+                <li>{{ result.object.content }}</li>
+	    {% endfor %}
+
 
             {% for result in page.object_list %}
+	    {{ result.object.book.version }}
+	    {% if result.object.book.hidden %}
+	    {% else %}
                 <p>
                     <a href="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_draft/{{ result.object.url_title }}/">{{ result.object.title }}</a>
                 </p>
+
+	    {% endif %}
             {% empty %}
-                <p>No results found.</p>
+                Ei tuloksia haulla {{ query }}!
             {% endfor %}
 
             {% if page.has_previous or page.has_next %}

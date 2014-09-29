@@ -1,3 +1,5 @@
-{{ object.title }} 
-{{ object.content }} 
-{{ object.modified }} 
+{% if not object.book.is_hidden %}
+       {{ object.title }} 
+       {{ object.content }} 
+       {{ object.modified }} 
+{% endif %}
