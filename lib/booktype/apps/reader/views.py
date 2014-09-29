@@ -33,7 +33,11 @@ from booktype.utils.book import remove_book
 from booktype.apps.core.views import BasePageView
 from booki.editor.models import Book, BookHistory, BookToc, Chapter
 
-from .forms import EditBookInfoForm
+from taggit.models import Tag
+from taggit.managers import TaggableManager
+from taggit.models import TagBase, ItemBase
+
+from .forms import (EditBookInfoForm, TagBookForm)
 
 class BaseReaderView(object):
     """
