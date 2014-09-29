@@ -40,8 +40,8 @@
                 <li>{{ result.object.status }}</li>
                 <li>{{ result.object.created }}</li>
                 <li>{{ result.object.revision }}</li>
-                <li>{{ result.object.content }}</li>
-                <li>{{ result.object.content }}</li>
+		<li>{{ result.object.version }}</li>
+                <li>{{ result.object.content|striptags|safe }}</li>
 	    {% endfor %}
 
 
