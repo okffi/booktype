@@ -8,9 +8,10 @@
 </div>
 <!-- end Bookbar -->
 
-<div class="container">
-
- <div class="row two-col">
+    <div class="container groupsettings">
+        <div class="row two-col">
+            <div class="col-xs-8">
+                <div class="box gray">
 
     <form method="get" action=".">
         <table>
@@ -28,7 +29,7 @@
 
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
+                    <a href="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_draft/{{ result.object.url_title }}/">{{ result.object.title }}</a>
                 </p>
             {% empty %}
                 <p>No results found.</p>
@@ -45,6 +46,8 @@
             {# Show some example queries to run, maybe query syntax, something else? #}
         {% endif %}
     </form>
+    </div>
+</div>
     </div>
 </div>
 
