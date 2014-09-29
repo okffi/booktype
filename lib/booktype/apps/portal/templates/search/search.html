@@ -1,5 +1,5 @@
 {% extends '/core/base.html' %}
-{% load i18n staticfiles profile messaging_tags reader_tags %}
+{% load i18n staticfiles profile messaging_tags reader_tags booktype_tags %}
 
 {% block content %}
 <!-- Bookbar -->
@@ -32,23 +32,17 @@
 
             <h3>Tulokset haulle {{ query }}</h3>
 
-	    {{ page|dictsort:"modified" }}
+	    {% for result in page.object_list %}
 
-
-	    {% for result in page.object_list|dictsort:"title" %}
-	    {{ result }}
             {% if result.object.book.hidden %}
             {% else %}
 
-		<p>Kirjan {{ result.object.book.title }} luku {{ result.object.title }}</p>
-                <p>Muokattu viimeksi {{ result.object.modified }}</p>
-         
-		<p>{{ result.object.version }}</p>
-		<div style="opacity:0.5;">{{ result.object.content|safe }}</div>
-                <p>
-                    <a href="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_draft/{{ result.object.url_title }}/">{{ result.object.title }}</a>
-                </p>
-
+            {{ highlight result.object.content with query }}
+		<h3><a href="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_draft/{{ result.object.url_title }}/">{{ result.object.title }}</a></h3>
+                <p>Kirjassa <a href ="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_info/">{{ result.object.book.title }}</a></p>
+                <i>Muokattu viimeksi {{ result.object.modified }}</i>
+		
+	    {% endif %}
 	    {% endif %}
             {% empty %}
                 Ei tuloksia haulla {{ query }}!
