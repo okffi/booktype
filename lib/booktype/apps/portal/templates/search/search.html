@@ -32,23 +32,19 @@
 
             <h3>Tulokset haulle {{ query }}</h3>
 
-	    {% for result in page.object_list %}
-                <li>{{ result }}</li>
-		<li>{{ result.object.book.title }}</li>
-                <li>{{ result.object.title }}</li>
-                <li>{{ result.object.modified }}</li>
-                <li>{{ result.object.status }}</li>
-                <li>{{ result.object.created }}</li>
-                <li>{{ result.object.revision }}</li>
-		<li>{{ result.object.version }}</li>
-                <li>{{ result.object.content|striptags|safe }}</li>
-	    {% endfor %}
+	    {{ page|dictsort:"modified" }}
 
 
-            {% for result in page.object_list %}
-	    {{ result.object.book.version }}
-	    {% if result.object.book.hidden %}
-	    {% else %}
+	    {% for result in page.object_list|dictsort:"title" %}
+	    {{ result }}
+            {% if result.object.book.hidden %}
+            {% else %}
+
+		<p>Kirjan {{ result.object.book.title }} luku {{ result.object.title }}</p>
+                <p>Muokattu viimeksi {{ result.object.modified }}</p>
+         
+		<p>{{ result.object.version }}</p>
+		<div style="opacity:0.5;">{{ result.object.content|safe }}</div>
                 <p>
                     <a href="http://fi.flossmanuals.net/{{ result.object.book.url_title }}/_draft/{{ result.object.url_title }}/">{{ result.object.title }}</a>
                 </p>
